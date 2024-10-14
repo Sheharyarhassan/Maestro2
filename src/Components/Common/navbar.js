@@ -21,7 +21,7 @@ import Composers from "../../assets/images/Images-Maestro/Composers.png";
 import Watch from "../../assets/images/Images-Maestro/Watch.png";
 import Learn from "../../assets/images/Images-Maestro/Learn.png";
 
-const Navbar = () => {
+const Navbar = ({publicRoute}) => {
   const [isOpenMenu, setisOpenMenu] = useState(false);
   const [navClass, setnavClass] = useState("");
 
@@ -91,8 +91,17 @@ const Navbar = () => {
               height="30"
             />
           </Link>
+{publicRoute ?  <div >
+              <Link
+                to="/login"
+                className="btn btn-link fw-bold text-decoration-none text-dark"
+              >
+                Contact
+              </Link>
+              {/* <Link to="/register" className="btn btn-success">Sign Up</Link> */}
+            </div>
 
-          <NavbarToggler
+: <> <NavbarToggler
             className="navbar-toggler py-0 fs-20 text-body"
             onClick={toggle}
             type="button"
@@ -153,6 +162,8 @@ const Navbar = () => {
               {/* <Link to="/register" className="btn btn-success">Sign Up</Link> */}
             </div>
           </Collapse>
+          </>}
+         
         </div>
       </nav>
     </React.Fragment>
