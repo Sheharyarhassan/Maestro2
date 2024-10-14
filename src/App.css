@@ -1,0 +1,109 @@
+.glosarry-tabs-wrapper .nav-success.nav-tabs-custom .nav-link.active::after{
+  background-color: rgb(0,159,227) !important;
+}
+.instrument button{
+  background-color: white;
+  margin-bottom: 0px !important;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 30px;
+  flex-wrap: nowrap; /* Ensure images wrap if container width is too small */
+}
+.image-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap; /* Ensure images wrap if container width is too small */
+  margin-top: -100px;
+}
+.image-wrapper {
+  flex: 1 1 100px; /* Flex-grow, flex-shrink, flex-basis */
+  max-width: 100px; /* Optional: maximum width */
+  max-height: 100px; /* Optional: maximum height */
+  overflow: hidden; /* Hide overflow */
+  transition: margin-top 0.3s;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio, fill the container */
+}
+.fw-extrabold{
+  font-weight: 900!important;
+}
+.fw-morebold{
+  font-weight: 800!important;
+}
+.fw-mediumdbold{
+  font-weight: 700!important;
+}
+.nav-tabs-custom .nav-link.active small{
+  color: #009fe3; 
+  font-weight: 900!important;
+}
+.nav-tabs-custom .nav-link.active::after {
+  background-color: #009fe3!important;
+  padding-bottom: 6px;
+}
+/* Remove default border for all tabs */
+.nav-tabs-custom .nav-link {
+  border: none;
+}
+
+/* Add padding to tabs for better spacing */
+.nav-tabs-custom .nav-item {
+  padding-bottom: 5px; /* Adjust as needed */
+}
+.rhap_controls-section {
+  flex: 0!important;;
+}
+
+
+
+
+.arc-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 40vh;
+  position: relative;
+}
+
+.family {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 10px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.family:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.family img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.arc-container::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #FFD700, #FF4500, #1E90FF, #32CD32, #8A2BE2);
+  z-index: -1;
+}
