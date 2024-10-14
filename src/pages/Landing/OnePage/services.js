@@ -8,8 +8,8 @@ const Services = () => {
 		<React.Fragment>
 			<section>
 				<div style={{backgroundColor:'#f6cf37'}} className="py-5 position-relative">
-        <img className="position-absolute mw-100 h-auto" style={{left:'-15px',top:'5px'}} src={noteRed}/>
-        <img className="position-absolute mw-100 h-auto" style={{right:'-15px',top:'-65px'}} src={noteGreen}/>
+        <img className="position-absolute mw-100 h-auto" style={{left:'-15px',top:'5px'}} src={noteRed} alt="Note Red"/>
+        <img className="position-absolute mw-100 h-auto" style={{right:'-15px',top:'-65px'}} src={noteGreen} alt="Note Green"/>
 					<Container>
 						<Row className="justify-content-center">
 							<Col lg={12}>

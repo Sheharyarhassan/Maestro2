@@ -22,8 +22,8 @@ const Home = () => {
   return (
     <React.Fragment>
       <section className={` pb-0 hero-section position-relative`} style={HeaderStyle} id="hero">
-        <img className="position-absolute" style={{left:'-13px',bottom:"-35px"}} src={noteImage}/>
-        <img className="position-absolute" style={{right:'15px',bottom:"15px"}} src={musicNotes}/> 
+        <img className="position-absolute" style={{left:'-13px',bottom:"-35px"}} src={noteImage} alt="Note Image"/>
+        <img className="position-absolute" style={{right:'15px',bottom:"15px"}} src={musicNotes} alt="Music Notes"/> 
         <Container className="py-5">
           <Row className="justify-content-center">
             <Col xl={12} lg={12} sm={12}>
