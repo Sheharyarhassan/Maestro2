@@ -37,7 +37,7 @@ const Index = () => {
 }, []);
   return (
     <React.Fragment>
-      <div className="layout-wrapper landing">
+      <div className="layout-wrapper landing overflow-hidden">
         <Home />
         <Client />
         <Services />

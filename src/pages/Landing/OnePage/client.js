@@ -19,20 +19,20 @@ const Client = () => {
           <Row>
             <Col lg={12}>
               <div className="text-center mt-5">
-                <h1 className="mb-4 text-white fw-morebold display-5 text-uppercase">What is Young MAESTROS?</h1>
+                <h1 className="mb-3 text-white fw-morebold text-uppercase display-6">What is Young MAESTROS?</h1>
 
-                <h4 className="mb-4 col-md-8 col-sm-10 text-white mx-auto">
+                <h5 className="mb-4 col-md-7 col-sm-10 text-white mx-auto lh-base">
                   Welcome to YOUNG MAESTROS. This is a new web service and app
                   for kids of all ages, all about classical music. Young Maestro
                   is aimed at three different age groups; zero to five years
                   old; six to eleven and twelve to sixteen.
-                </h4>
-                <h4 className="text-white mb-0">Say hello to...</h4>
-                <h1 className="text-white mb-0 fw-morebold display-5 text-uppercase">Manny, Alfonso and Quinn!</h1>
+                </h5>
+                <h5 className="text-white mb-0 lh-base">Say hello to...</h5>
+                <h1 className="text-white mb-0 fw-morebold text-uppercase">HILDEY, LUDWIG AND WOLFGANG!</h1>
                 <img
                   src={charcter}
                   style={setPicture}
-                  className="mw-100 h-auto"
+                  className="mw-100 h-auto col-xl-5 col-md-6 col-sm-10 position-relative z-3"
                   alt="all-chracter"
                 />
               </div>

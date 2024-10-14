@@ -6,6 +6,9 @@ import "swiper/css/effect-fade";
 import "swiper/css/pagination";
 import { bannerCards } from "./CardsBannerData";
 import sliderimage1 from "../../../assets/images/heroBackground.jpg";
+import noteImage from "../../../assets/images/Images-Maestro/New Assets/Note.png";
+import musicNotes from "../../../assets/images/Images-Maestro/New Assets/MusicNotes.png"
+
 const Home = () => {
   const [selectedCard, setSelectedCard] = useState("");
   console.log("SeelctedArea", selectedCard);
@@ -18,12 +21,14 @@ const Home = () => {
   };
   return (
     <React.Fragment>
-      <section className={` pb-0 hero-section `} style={HeaderStyle} id="hero">
+      <section className={` pb-0 hero-section position-relative`} style={HeaderStyle} id="hero">
+        <img className="position-absolute" style={{left:'-13px',bottom:"-35px"}} src={noteImage}/>
+        <img className="position-absolute" style={{right:'15px',bottom:"15px"}} src={musicNotes}/> 
         <Container className="py-5">
           <Row className="justify-content-center">
             <Col xl={12} lg={12} sm={12}>
               <div className="text-center">
-                <h1 className="text-black fw-morebold">
+                <h1 className="text-black fw-morebold display-6">
                   CHOOSE YOUR COMPOSER
                 </h1>
               </div>
