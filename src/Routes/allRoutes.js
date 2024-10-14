@@ -16,7 +16,8 @@ import Game from "../pages/Game";
 import WatchScreen from "../pages/WatchScreen/index.js";
 import Glossary from "../pages/Glossary";
 import Learn from "../pages/Learn"
-
+import Hildey from "../pages/Hildey"
+import { compose } from "redux";
 const authProtectedRoutes = [
   {
     path: "/",
@@ -28,7 +29,7 @@ const authProtectedRoutes = [
 const publicRoutes = [
 
   { path: "/", component: <OnePage /> },
-
+  {path:"/hildey", component: <Hildey/>},
   { path: "/login", component: <Login /> },
   { path: "/register", component: <Register /> },
   { path: "/categories", component: <Categories /> },
