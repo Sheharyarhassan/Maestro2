@@ -75,7 +75,7 @@ const index = () => {
 
 		// Delay to switch to next section
 		setTimeout(() => {
-			// setShowNextSection(true);
+			setShowNextSection(true);
 		}, 4500); // Adjust timing to match your needs
 	};
 
