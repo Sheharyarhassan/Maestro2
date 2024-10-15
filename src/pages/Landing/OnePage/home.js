@@ -44,8 +44,8 @@ const Home = () => {
                     style={{
                       cursor: "pointer",
                       border:
-                        selectedCard === value.area ? "3px solid blue" : "none",
-                      borderRadius: "20px",
+                        selectedCard === value.area ? "2px solid blue" : "none",
+                      borderRadius: "5px",
                     }}
                   >
                     <img
