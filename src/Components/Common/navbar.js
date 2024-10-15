@@ -122,28 +122,28 @@ const Navbar = ({publicRoute}) => {
             <div className="navbar-nav mx-auto mt-2 mt-lg-0 align-items-center">
               <li className="nav-item my-2">
               <NavLink
-								className="rounded text-white text-uppercase fw-semibold px-3 py-2 d-flex align-items-center me-2"
+								className="rounded-3 text-white text-uppercase fw-semibold px-4 py-1 d-flex align-items-center me-2"
 								style={{backgroundColor: "#41b2d8", height: "fit-content"}}
 								href="/hildey">
-								Ready to Take a Quiz
+								Game
 							</NavLink>
               </li>
               <li className="nav-item my-2">
               <NavLink
-								className="rounded text-uppercase fw-semibold text-white px-3 py-2 d-flex align-items-center me-2"
+								className="rounded-3 text-uppercase fw-semibold text-white px-4 py-1 d-flex align-items-center me-2"
 								style={{backgroundColor: "#1ccb49"}}
 								href="/rhythm"
-								>Elements of Music
+								>Rhythm
 								</NavLink>
               </li>
               <li className="nav-item my-2">
-                <NavLink href="/instruments" className="rounded text-uppercase fw-semibold text-white px-3 py-2 d-flex align-items-center me-2"
+                <NavLink href="/instruments" className="rounded-3 text-uppercase fw-semibold text-white px-4 py-1 d-flex align-items-center me-2"
 								style={{backgroundColor: "#e3971d"}}
-								>Get to know your instruments
+								>Instruments
                 </NavLink>
               </li>
               <li className="nav-item my-2">
-                <NavLink href="#" className=" text-uppercase rounded fw-semibold text-white px-4 py-2 d-flex align-items-center me-2"
+                <NavLink href="/composer" className=" text-uppercase rounded-3 fw-semibold text-white px-4 py-1 d-flex align-items-center me-2"
 								style={{backgroundColor: "#ef5130"}}
 								>COMPOSERS
                 </NavLink>
@@ -154,10 +154,10 @@ const Navbar = ({publicRoute}) => {
                 </NavLink>
               </li> */}
               <li className="nav-item my-2">
-                <NavLink href="/Learn" 
-								className="text-uppercase rounded fw-semibold text-white px-3 py-2 d-flex align-items-center"
+                <NavLink href="#" 
+								className="text-uppercase rounded fw-semibold text-white px-4 py-1 d-flex align-items-center"
 								style={{backgroundColor: "#ea8bb8"}}
-								>Fun Facts
+								>Learn
                 </NavLink>
               </li>
             </div>

@@ -23,7 +23,7 @@ const Footer = ({ publicRoute }) => {
 		backgroundColor: "#00103a",
 	};
 	const bgLight = {
-		backgroundColor: "#fffff",
+		backgroundColor: "white",
 	};
 	return (
 		<React.Fragment>
@@ -58,27 +58,27 @@ const Footer = ({ publicRoute }) => {
 									<li className="ps-2 pe-2 border-end border-dark align">
 										<h5 className="mb-0">
 											<Link to="/hildey" className="text-black fw-semibold">
-												Ready to Take a Quiz
+												Game
 											</Link>
 										</h5>
 									</li>
 									<li className="ps-2 pe-2 border-end border-dark">
 										<h5 className="mb-0">
 											<Link to="/rhythm" className="text-black fw-semibold">
-												Elements of Music
+												Rhythm
 											</Link>
 										</h5>
 									</li>
 									<li className="ps-2 pe-2 border-end border-dark">
 										<h5 className="mb-0">
 											<Link to="/rhythm" className="text-black fw-semibold">
-												Get to know your instruments
+												Instruments
 											</Link>
 										</h5>
 									</li>
 									<li className="ps-2 pe-2 border-end border-dark">
 										<h5 className="mb-0">
-											<Link to="/rhythm" className="text-black fw-semibold">
+											<Link to="/composer" className="text-black fw-semibold">
 												Composers
 											</Link>
 										</h5>
@@ -86,7 +86,7 @@ const Footer = ({ publicRoute }) => {
 									<li className="ps-2 pe-2 border-end border-dark">
 										<h5 className="mb-0">
 											<Link to="/rhythm" className="text-black fw-semibold">
-												Fun Facts
+												Learn
 											</Link>
 										</h5>
 									</li>

@@ -2,28 +2,36 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import { Provider } from "react-redux";
 import Navbar from "./Components/Common/navbar";
 import Footer from "./Components/Common/footer";
 import store from "./slices";
-// const store = configureStore({ reducer: rootReducer, devTools: true });
+
+const RootComponent = () => {
+  const location = useLocation(); // Use hook inside a component
+  const isPublicRoute = location.pathname === "/hildey";
+
+  return (
+    <>
+      <Navbar publicRoute={isPublicRoute} />
+      <App />
+      <Footer publicRoute={isPublicRoute} />
+    </>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.Fragment>
+  <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Provider store={store}>
-        <Navbar />
-        <App />
-        <Footer />
+        <RootComponent />
       </Provider>
     </BrowserRouter>
-  </React.Fragment>
+  </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// For measuring performance (optional)
 reportWebVitals();

@@ -1,39 +1,24 @@
 import React, { useEffect } from "react";
-import BannerImage from "../../assets/images/Images-Maestro/InstrumentsBanner.png";
-import { useGetInstrumentBannerQuery } from "../../ReduxStore/rtk";
-import PageLoader from "../../Components/Common/PageLoader";
 const Banner = () => {
-  const bannerStyle = {
-    backgroundImage: `url(${BannerImage})`,
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center center",
-  };
-  const { data, error, isLoading, isFetching, refetch } =
-    useGetInstrumentBannerQuery({ area: "Yellow", page: "Instrument" });
-  useEffect(() => {
-    refetch();
-  }, []);
-  return (
-    <>
-      {(isLoading && isLoading) || (isFetching && isFetching) ? (
-        <PageLoader />
-      ) : null}
-      <div className="w-100 position-relative">
-        <h1 className="text-center text-uppercase text-black position-absolute top-50 start-50 translate-middle fw-extrabold display-4">
-          Instrument
-        </h1>
-        <img
-          className="w-100 d-lg-block d-none"
-          src={`https://localhost:7264${data && data?.Banner}`}
-        />
-        <img
-          className="w-100 d-lg-none d-block"
-          src={`https://localhost:7264${data && data?.Banner}`}
-        />
-      </div>
-    </>
-  );
+  const InstrumentBannerStyle = {
+		backgroundColor: "#e9a035",
+		height: "36vh",
+	};
+	return (
+		<React.Fragment>
+			<div style={InstrumentBannerStyle}>
+				<div className="text-center pt-5">
+					<h1 className="text-white fw-bold pt-5">Get to know your Instruments</h1>
+					<div className="container px-5">
+						<h4 className="text-white fw-semibold">
+            Ebitat faccum volupid eos as as maximaio. Nam fugit, qui omnis aut la velictis cumet unt.
+            Et adipicia qui od molupta sintist et dolupti stempore omniaspiente oditas.
+						</h4>
+					</div>
+				</div>
+			</div>
+		</React.Fragment>
+	);
 };
 
 export default Banner;

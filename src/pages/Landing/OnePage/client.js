@@ -11,6 +11,7 @@ const Client = () => {
   };
   const setPicture = {
     marginBottom: "-15px",
+    marginTop:'50px'
   };
   return (
     <React.Fragment>
@@ -18,7 +19,7 @@ const Client = () => {
         <Container>
           <Row>
             <Col lg={12}>
-              <div className="text-center mt-5">
+              <div className="text-center">
                 <h1 className="mb-3 text-white fw-morebold text-uppercase display-6">What is Young MAESTROS?</h1>
 
                 <h5 className="mb-4 col-md-7 col-sm-10 text-white mx-auto lh-base">

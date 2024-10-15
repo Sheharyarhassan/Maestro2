@@ -30,10 +30,10 @@ const authProtectedRoutes = [
 
 const publicRoutes = [
 
-  { path: "/", component: <OnePage /> },
-  {path:"/hildey", component: <Hildey/>},
-  { path: "/login", component: <Login /> },
-  { path: "/register", component: <Register /> },
+  { path: "/hildey", component: <OnePage /> },
+  {path:"/", component: <Hildey/>},
+  { path: "/login", component: <Hildey /> },
+  // { path: "/register", component: <Register /> },
   { path: "/categories", component: <Categories /> },
   { path: "/rhythm", component: <Rhythm /> },
   { path: "/rhythmDetails/:cardId", component: <RhythmDetails /> },
