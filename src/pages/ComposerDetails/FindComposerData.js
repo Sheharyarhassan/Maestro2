@@ -1,11 +1,14 @@
+
 export const tabContent = {
   "1": [
     {
+      
       id: 1,
       Name: " Frédéric Chopin",
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
     {
       id: 2,
@@ -13,6 +16,7 @@ export const tabContent = {
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
     {
       id: 3,
@@ -20,6 +24,7 @@ export const tabContent = {
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
     {
       id: 4,
@@ -27,6 +32,7 @@ export const tabContent = {
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
     {
       id: 5,
@@ -34,6 +40,7 @@ export const tabContent = {
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
     {
       id: 6,
@@ -41,6 +48,7 @@ export const tabContent = {
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
     {
       id: 7,
@@ -48,6 +56,7 @@ export const tabContent = {
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
     {
       id: 8,
@@ -55,6 +64,7 @@ export const tabContent = {
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
     {
       id: 9,
@@ -62,6 +72,7 @@ export const tabContent = {
       Born: "March 1st 1810",
       Pob: "  Żelazowa Wola, Poland",
       Period: ": Romantic",
+      Image: require("../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png"),
     },
   ],
 };

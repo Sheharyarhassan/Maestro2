@@ -13,7 +13,8 @@ import {
 import { tabContent } from "./FindComposerData";
 import { NavLink } from "react-router-dom";
 import classnames from "classnames";
-
+import CardImage from "../../assets/images/Images-Maestro/New Assets/ComposerBg.png";
+import ComposerCardImage from "../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png";
 const GallerySection = () => {
   const [customActiveTab, setCustomActiveTab] = useState("1");
 
@@ -31,12 +32,18 @@ const GallerySection = () => {
       item.Name.trim().startsWith(char)
     );
   });
-const backgroundStyle = {
-    backgroundColor:'#f4e652',
-}
+  const backgroundStyle = {
+    backgroundColor: "#f4e652",
+  };
+  const cardImageStyle = {
+    backgroundImage: `url(${CardImage})`,
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    backgroundRepeate: "no-repeate",
+  };
   return (
     <div className="w-100" style={backgroundStyle}>
-      <Container  className="mt-5 pt-5">
+      <Container className="mt-5 pt-5">
         <Row>
           <Col sm="12" className="ps-4">
             <div className="galleryContent">
@@ -54,7 +61,7 @@ const backgroundStyle = {
                   tabs
                   className="nav nav-tabs nav-tabs-custom nav-success nav-justified mb-3 border-0"
                 >
-                  <NavItem>
+                  <NavItem className="ps-2">
                     <NavLink
                       style={{
                         cursor: "pointer",
@@ -65,7 +72,7 @@ const backgroundStyle = {
                             : "rgb(0 0 0 / 40%)",
                         borderBottom:
                           customActiveTab === "1"
-                            ? "2px solid rgb(0,159,227)" // Underline for active tab
+                            ? "4px solid rgb(0,159,227)" // Underline for active tab
                             : "none",
                       }}
                       className={classnames({
@@ -73,7 +80,7 @@ const backgroundStyle = {
                       })}
                       onClick={() => toggleCustom("1")}
                     >
-                      All
+                      ALL
                     </NavLink>
                   </NavItem>
                   {alphabet.map((char, index) => (
@@ -88,7 +95,7 @@ const backgroundStyle = {
                               : "rgb(0 0 0 / 40%)",
                           borderBottom:
                             customActiveTab === (index + 2).toString()
-                              ? "2px solid rgb(0,159,227)" // Underline for active tab
+                              ? "4px solid rgb(0,159,227)" // Underline for active tab
                               : "none",
                         }}
                         className={classnames({
@@ -102,64 +109,92 @@ const backgroundStyle = {
                   ))}
                 </Nav>
 
-                <Container className="mt-4 px-3">
-                    <Row>
-                        <Col sm="12" className="px-2">
-                        <div>
-                            <h5 className="mb-1">ROMANTIC PERIOD</h5>
-                            <h5>1827 - 1900</h5>
-                        </div>
-                        </Col>
-                    </Row>
-                  <TabContent
-                    activeTab={customActiveTab}
-                    className="text-muted"
-                  >
-                    {Object.keys(tabContent).map((tabId) => (
-                      <TabPane tabId={tabId} key={tabId}>
-                        {tabContent[tabId].length > 0 ? (
-                          <Row>
-                            {tabContent[tabId].map((item, index) => (
-                              <Col
-                                md="6"
-                                lg="4"
-                                sm="6"
-                                xs="12"
-                                key={index}
-                                // className="mb-4"
-                              >
-                                <Card className="border-0 shadow-sm">
-                                  <CardBody>
-                                    <p
-                                      className="text-uppercase mb-0"
-                                    >
-                                      <span className="fw-bold">Name:</span> {item.Name}
-                                    </p>
-                                    <p className="text-dark mb-0">
-                                    <span className="fw-bold">Born:</span> {item.Born}
-                                    </p>
-                                    <p className="text-dark mb-0">
-                                    <span className="fw-bold"> PlaceoBirth:</span> {item.Pob}
-                                    </p>
-                                    <p className="text-dark">
-                                    <span className="fw-bold">Period:</span> {item.Period}
-                                    </p>
-                                  </CardBody>
-                                </Card>
-                              </Col>
-                            ))}
-                          </Row>
-                        ) : (
-                          <div className="cnt-wrapper">
-                            <p className="text-dark fw-bold fs-5">
-                              No content found
-                            </p>
-                          </div>
-                        )}
-                      </TabPane>
-                    ))}
-                  </TabContent>
-                </Container>
+                <div className="mt-4 px-3">
+                  <Row>
+                    <Col sm="12" className="px-2">
+                      <div>
+                        <h5 className="mb-1 text-primary">ROMANTIC PERIOD</h5>
+                        <h5>1827 - 1900</h5>
+                      </div>
+                    </Col>
+                    <Col sm={12}>
+                      <TabContent
+                        activeTab={customActiveTab}
+                        className="text-muted"
+                      >
+                        {Object.keys(tabContent).map((tabId) => (
+                          <TabPane tabId={tabId} key={tabId}>
+                            {tabContent[tabId].length > 0 ? (
+                              <Row>
+                                {tabContent[tabId].map((item, index) => (
+                                  <Col
+                                    md="6"
+                                    lg="4"
+                                    sm="6"
+                                    xs="12"
+                                    key={index}
+                                    // className="mb-4"
+                                  >
+                                    <Card className="border-0 shadow-sm">
+                                      <CardBody className="p-0">
+                                        <div
+                                          className="cardImage text-center rounded-top p-4 pb-0"
+                                          style={cardImageStyle}
+                                        >
+                                          <img
+                                            src={item.Image}
+                                            alt="composer"
+                                            className="mw-100 h-auto"
+                                          />
+                                        </div>
+                                        <div className="p-3 rounded-bottom">
+                                          <p className="text-uppercase mb-0">
+                                            <span className="fw-bold">
+                                              Name:
+                                            </span>{" "}
+                                            {item.Name}
+                                          </p>
+                                          <p className="text-dark mb-0">
+                                            <span className="fw-bold">
+                                              Born:
+                                            </span>{" "}
+                                            {item.Born}
+                                          </p>
+                                          <p className="text-dark mb-0">
+                                            <span className="fw-bold">
+                                              {" "}
+                                              PlaceoBirth:
+                                            </span>{" "}
+                                            {item.Pob}
+                                          </p>
+                                          <p className="text-dark mb-0">
+                                            <span className="fw-bold">
+                                              Period:
+                                            </span>{" "}
+                                            {item.Period}
+                                          </p>
+                                        </div>
+                                      </CardBody>
+                                    </Card>
+                                  </Col>
+                                ))}
+                              </Row>
+                            ) : (
+                              <div className="cnt-wrapper">
+                                <p className="text-dark fw-bold fs-5">
+                                  No content found
+                                </p>
+                              </div>
+                            )}
+                          </TabPane>
+                        ))}
+                      </TabContent>
+                    </Col>
+                    <Col sm={12} className="text-center">
+                    <h4><strong>Load More</strong></h4>
+                    </Col>
+                  </Row>
+                </div>
               </CardBody>
             </Card>
           </Col>
