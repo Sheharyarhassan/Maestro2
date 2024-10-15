@@ -18,6 +18,7 @@ import Glossary from "../pages/Glossary";
 import Learn from "../pages/Learn"
 import Hildey from "../pages/Hildey"
 import Composer from "../pages/Composer"
+import ComposerDetails from "../pages/ComposerDetails"
 import { compose } from "redux";
 const authProtectedRoutes = [
   {
@@ -42,7 +43,9 @@ const publicRoutes = [
   { path:"/game" , component: <Game />},
   { path:'/learn', component: <Learn />},
   { path: "/auth-500", component: <Error500 /> },
-  {path: "/composer", component: <Composer/>}
+  {path: "/composer", component: <Composer/>},
+  {path: "/composerDetails", component: <ComposerDetails/>,
+  }
 ];
 
 export { authProtectedRoutes, publicRoutes };

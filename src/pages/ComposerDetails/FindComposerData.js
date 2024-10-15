@@ -1,0 +1,67 @@
+export const tabContent = {
+  "1": [
+    {
+      id: 1,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+    {
+      id: 2,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+    {
+      id: 3,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+    {
+      id: 4,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+    {
+      id: 5,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+    {
+      id: 6,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+    {
+      id: 7,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+    {
+      id: 8,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+    {
+      id: 9,
+      Name: " Frédéric Chopin",
+      Born: "March 1st 1810",
+      Pob: "  Żelazowa Wola, Poland",
+      Period: ": Romantic",
+    },
+  ],
+};
