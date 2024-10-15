@@ -107,3 +107,10 @@
   background: linear-gradient(to right, #FFD700, #FF4500, #1E90FF, #32CD32, #8A2BE2);
   z-index: -1;
 }
+.navbar-landing .navbar-nav .nav-item .nav-link:hover, .navbar-landing .navbar-nav .nav-item .nav-link.active, .navbar-landing .navbar-nav .nav-item .nav-link:focus {
+  color: black!important;
+}
+.navbar-landing .navbar-nav .nav-item .nav-link {
+  font-size: 13px!important;
+
+}
