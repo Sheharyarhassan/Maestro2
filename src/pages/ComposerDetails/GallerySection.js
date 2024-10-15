@@ -14,7 +14,12 @@ import { tabContent } from "./FindComposerData";
 import { NavLink } from "react-router-dom";
 import classnames from "classnames";
 import CardImage from "../../assets/images/Images-Maestro/New Assets/ComposerBg.png";
-import ComposerCardImage from "../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png";
+import rightBlueNote from "../../assets/images/Images-Maestro/New Assets/rightbluenote.png";
+import rightgreennote from "../../assets/images/Images-Maestro/New Assets/rightgreennote.png";
+import rightorangenote from "../../assets/images/Images-Maestro/New Assets/rightorangenote.png";
+import leftGreennote from "../../assets/images/Images-Maestro/New Assets/leftgreennote.png";
+import leftbottomgreen from "../../assets/images/Images-Maestro/New Assets/leftbottomgreen.png";
+import leftbluenote from "../../assets/images/Images-Maestro/New Assets/leftbluenote.png";
 const GallerySection = () => {
   const [customActiveTab, setCustomActiveTab] = useState("1");
 
@@ -34,6 +39,8 @@ const GallerySection = () => {
   });
   const backgroundStyle = {
     backgroundColor: "#f4e652",
+    position: "relative",
+    overflowX: "hidden",
   };
   const cardImageStyle = {
     backgroundImage: `url(${CardImage})`,
@@ -41,14 +48,68 @@ const GallerySection = () => {
     backgroundSize: "cover",
     backgroundRepeate: "no-repeate",
   };
+  const rightBlueNoteStyle = {
+    top: "50%",
+    right: "-2%",
+  };
+  const rightgreennoteStyle = {
+    top: "17%",
+    right: "1%",
+  };
+  const rightorangenoteStyle = {
+    top: "24%",
+    right: "2.5%",
+  };
+  const leftGreenNoteStyle = {
+    top: "27%",
+    left: "-2.5%",
+  }
+  const leftBlueNoteStyle = {
+    top: "47%",
+    left:'3%'
+  }
+  const leftbottomgreenStyle = {
+    bottom:'2%',
+    left:'-2%'
+  }
   return (
     <div className="w-100" style={backgroundStyle}>
-      <Container className="mt-5 pt-5">
+        <img
+        src={leftGreennote}
+        className="mw-100 h-auto position-absolute"
+        style={leftGreenNoteStyle}
+      /> 
+       <img
+        src={leftbluenote}
+        className="mw-100 h-auto position-absolute"
+        style={leftBlueNoteStyle}
+      /> 
+       <img
+        src={leftbottomgreen}
+        className="mw-100 h-auto position-absolute"
+        style={leftbottomgreenStyle}
+      /> 
+      <img
+        src={rightBlueNote}
+        className="mw-100 h-auto position-absolute"
+        style={rightBlueNoteStyle}
+      />
+      <img
+        src={rightgreennote}
+        className="mw-100 h-auto position-absolute"
+        style={rightgreennoteStyle}
+      />
+      <img
+        src={rightorangenote}
+        className="mw-100 h-auto position-absolute"
+        style={rightorangenoteStyle}
+      />
+      <Container className="mt-5 pt-5 position-relative">
         <Row>
           <Col sm="12" className="ps-4">
             <div className="galleryContent">
-              <h4 className="text-primary">FIND COMPOSERS</h4>
-              <h4 className="text-black">A-Z of composers.</h4>
+              <h3 className="text-primary fw-morebold">FIND COMPOSERS</h3>
+              <h4 className="text-black fw-morebold">A-Z of composers.</h4>
             </div>
           </Col>
           <Col sm="12">
@@ -113,7 +174,7 @@ const GallerySection = () => {
                   <Row>
                     <Col sm="12" className="px-2">
                       <div>
-                        <h5 className="mb-1 text-primary">ROMANTIC PERIOD</h5>
+                        <h5 className="mb-1 text-primary fw-semibold">ROMANTIC PERIOD</h5>
                         <h5>1827 - 1900</h5>
                       </div>
                     </Col>
@@ -190,8 +251,8 @@ const GallerySection = () => {
                         ))}
                       </TabContent>
                     </Col>
-                    <Col sm={12} className="text-center">
-                    <h4><strong>Load More</strong></h4>
+                    <Col sm={12} className="text-black text-center">
+                      <h5 className="fw-bold">Load More</h5>
                     </Col>
                   </Row>
                 </div>

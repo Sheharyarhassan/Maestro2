@@ -19,6 +19,7 @@ import Learn from "../pages/Learn"
 import Hildey from "../pages/Hildey"
 import Composer from "../pages/Composer"
 import ComposerDetails from "../pages/ComposerDetails"
+import ComposerInnerDetails from "../pages/ComposerInnerDetails"
 import { compose } from "redux";
 const authProtectedRoutes = [
   {
@@ -45,6 +46,8 @@ const publicRoutes = [
   { path: "/auth-500", component: <Error500 /> },
   {path: "/composer", component: <Composer/>},
   {path: "/composerDetails", component: <ComposerDetails/>,
+  },
+  {path: "/composerInnerDetails", component: <ComposerInnerDetails/>,
   }
 ];
 
