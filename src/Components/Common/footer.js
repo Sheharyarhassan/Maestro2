@@ -19,15 +19,17 @@ import InstagramLight from "../../assets/images/Images-Maestro/cropped-black-ins
 import FacebookLight from "../../assets/images/Images-Maestro/iconfinder_icon-02_2515845 (2)_white.png";
 
 const Footer = ({ publicRoute }) => {
-  const bgDark = {
-    backgroundColor: "#00103a"
-  }
-  const bgLight = {
-    backgroundColor: "#fffff"
-  }
+	const bgDark = {
+		backgroundColor: "#00103a",
+	};
+	const bgLight = {
+		backgroundColor: "#fffff",
+	};
 	return (
 		<React.Fragment>
-			<footer className="custom-footer py-5 position-relative" style={publicRoute? bgDark : bgLight}>
+			<footer
+				className="custom-footer py-5 position-relative"
+				style={publicRoute ? bgDark : bgLight}>
 				<div className="container-fluid px-5">
 					<Row className="align-items-center justify-content-between">
 						<Col lg={3} className="mt-4 fs-13">
@@ -40,7 +42,10 @@ const Footer = ({ publicRoute }) => {
 									)}
 								</div>
 								<div className="mt-2">
-									<h5 className={`text-lg-start text-center fw-semibold ${publicRoute ? " text-white ": "text-black "}`}>
+									<h5
+										className={`text-lg-start text-center fw-semibold ${
+											publicRoute ? " text-white " : "text-black "
+										}`}>
 										© {new Date().getFullYear()} Young Maestros. All rights
 										reserved.
 									</h5>
@@ -48,76 +53,83 @@ const Footer = ({ publicRoute }) => {
 							</div>
 						</Col>
 						{publicRoute ? null : (
-							<Col lg={6} className="ms-auto">
-								<Row className="justify-content-lg-end justify-content-center">
-									<Col sm={3} className="mt-md-4 mt-0">
-										<ul className="list-unstyled ff-secondary footer-list text-lg-start text-center mb-0">
-											<li>
-												<h5>
-													<Link to="/game" className="text-black fw-semibold">
-														Games
-													</Link>
-												</h5>
-											</li>
-											<li>
-												<h5>
-													<Link
-														to="/instruments"
-														className="text-black fw-semibold">
-														Instruments
-													</Link>
-												</h5>
-											</li>
-										</ul>
-									</Col>
-									<Col sm={3} className="mt-md-4 mt-0">
-										<ul className="list-unstyled ff-secondary footer-list text-lg-start text-center mb-0">
-											<li>
-												<h5>
-													<Link to="#" className="text-black fw-semibold">
-														Composers
-													</Link>
-												</h5>
-											</li>
-											<li>
-												<h5>
-													<Link to="/watch" className="text-black fw-semibold">
-														Watch
-													</Link>
-												</h5>
-											</li>
-										</ul>
-									</Col>
-									<Col sm={3} className="mt-md-4 mt-0">
-										<ul className="list-unstyled ff-secondary footer-list text-lg-start text-center mb-0">
-											<li>
-												<h5>
-													<Link to="/learn" className="text-black fw-semibold">
-														Learn
-													</Link>
-												</h5>
-											</li>
-											<li>
-												<h5>
-													<Link to="/login" className="text-black fw-semibold">
-														Log in
-													</Link>
-												</h5>
-											</li>
-										</ul>
-									</Col>
-								</Row>
+							<Col lg={6}>
+								<ul className="list-unstyled d-flex flex-wrap ff-secondary mb-0 justify-content-center align-items-center">
+									<li className="ps-2 pe-2 border-end border-dark align">
+										<h5 className="mb-0">
+											<Link to="/hildey" className="text-black fw-semibold">
+												Ready to Take a Quiz
+											</Link>
+										</h5>
+									</li>
+									<li className="ps-2 pe-2 border-end border-dark">
+										<h5 className="mb-0">
+											<Link to="/rhythm" className="text-black fw-semibold">
+												Elements of Music
+											</Link>
+										</h5>
+									</li>
+									<li className="ps-2 pe-2 border-end border-dark">
+										<h5 className="mb-0">
+											<Link to="/rhythm" className="text-black fw-semibold">
+												Get to know your instruments
+											</Link>
+										</h5>
+									</li>
+									<li className="ps-2 pe-2 border-end border-dark">
+										<h5 className="mb-0">
+											<Link to="/rhythm" className="text-black fw-semibold">
+												Composers
+											</Link>
+										</h5>
+									</li>
+									<li className="ps-2 pe-2 border-end border-dark">
+										<h5 className="mb-0">
+											<Link to="/rhythm" className="text-black fw-semibold">
+												Fun Facts
+											</Link>
+										</h5>
+									</li>
+									<li className="ps-2 pe-2">
+										<h5 className="mb-0">
+											<Link to="/login" className="text-black fw-semibold">
+												login
+											</Link>
+										</h5>
+									</li>
+								</ul>
 							</Col>
 						)}
-						<Col lg={3} className="fs-13 text-lg-end text-center mt-3">
+						<Col lg={2} className="fs-13 text-lg-end text-center mt-3">
 							<div>
-								<h5 className={`text-black fw-semibold ${publicRoute? " text-white " : " text-black "}`}>Contact Us</h5>
+								<h5
+									className={`text-black fw-semibold ${
+										publicRoute ? " text-white " : " text-black "
+									}`}>
+									Contact Us
+								</h5>
 							</div>
 							<div className="d-flex justify-content-lg-end justify-content-center mt-2">
-								<img src={publicRoute? AppleLight: Apple} width="30" className="ms-2" />
-								<img src={publicRoute? TiktokLight: Tiktok} width="30" className="ms-2" />
-								<img src={publicRoute? InstagramLight: Instagram} width="30" className="ms-2" />
-								<img src={publicRoute? FacebookLight: Facebook} width="30" className="ms-2" />
+								<img
+									src={publicRoute ? AppleLight : Apple}
+									width="30"
+									className="ms-2"
+								/>
+								<img
+									src={publicRoute ? TiktokLight : Tiktok}
+									width="30"
+									className="ms-2"
+								/>
+								<img
+									src={publicRoute ? InstagramLight : Instagram}
+									width="30"
+									className="ms-2"
+								/>
+								<img
+									src={publicRoute ? FacebookLight : Facebook}
+									width="30"
+									className="ms-2"
+								/>
 							</div>
 						</Col>
 					</Row>

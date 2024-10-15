@@ -72,7 +72,7 @@ const Navbar = ({publicRoute}) => {
     <React.Fragment>
       <nav
         className={
-          "navbar navbar-expand-lg px-5 navbar-landing sticky-top bg-white " + navClass
+          "navbar navbar-expand-lg px-xxl-5 px-lg-0 px-xl-3 px-4 py-3 navbar-landing sticky-top bg-white " + navClass
         }
         id="navbar"
       >
@@ -80,20 +80,20 @@ const Navbar = ({publicRoute}) => {
           <Link className="navbar-brand" to="/">
             <img
               src={logodark}
-              className="card-logo card-logo-dark d-lg-block d-none"
+              className="card-logo card-logo-dark d-xxl-block d-none"
               alt="logo dark"
               height="30"
             />
             <img
               src={logolightMobile}
-              className="card-logo card-logo-light d-lg-none d-block"
+              className="card-logo card-logo-light d-xxl-none d-block"
               alt="logo light"
               height="30"
             />
           </Link>
 {publicRoute ?  <div >
               <Link
-                to="/login"
+                to="/"
                 className="btn btn-link fw-bold text-decoration-none text-dark"
               >
                 Contact
@@ -119,35 +119,45 @@ const Navbar = ({publicRoute}) => {
             className="navbar-collapse text-center"
             id="navbarSupportedContent"
           >
-            <div className="navbar-nav mx-auto mt-2 mt-lg-0">
-              <li className="nav-item">
-                <NavLink href="/game" className="px-1 mx-1 px-xl-2 mx-xl-2">
-                  <img src={Game} alt="Game NavItem" width="80" />
+            <div className="navbar-nav mx-auto mt-2 mt-lg-0 align-items-center">
+              <li className="nav-item my-2">
+              <NavLink
+								className="rounded text-white text-uppercase fw-semibold px-3 py-2 d-flex align-items-center me-2"
+								style={{backgroundColor: "#41b2d8", height: "fit-content"}}
+								href="/hildey">
+								Ready to Take a Quiz
+							</NavLink>
+              </li>
+              <li className="nav-item my-2">
+              <NavLink
+								className="rounded text-uppercase fw-semibold text-white px-3 py-2 d-flex align-items-center me-2"
+								style={{backgroundColor: "#1ccb49"}}
+								href="/rhythm"
+								>Elements of Music
+								</NavLink>
+              </li>
+              <li className="nav-item my-2">
+                <NavLink href="/instruments" className="rounded text-uppercase fw-semibold text-white px-3 py-2 d-flex align-items-center me-2"
+								style={{backgroundColor: "#e3971d"}}
+								>Get to know your instruments
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink href="/rhythm" className="px-1 mx-1 px-xl-2 mx-xl-2">
-                  <img src={Rhythm} alt="Rhythm NavItem" width="80" />
+              <li className="nav-item my-2">
+                <NavLink href="#" className=" text-uppercase rounded fw-semibold text-white px-4 py-2 d-flex align-items-center me-2"
+								style={{backgroundColor: "#ef5130"}}
+								>COMPOSERS
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink href="/instruments" className="px-1 mx-1 px-xl-2 mx-xl-2">
-                  <img src={Instruments} alt="Instruments NavItem" width="109" />
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink href="#" className="px-1 mx-1 px-xl-2 mx-xl-2">
-                  <img src={Composers} alt="Composers NavItem" width="109" />
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink href="/watch" className="px-1 mx-1 px-xl-2 mx-xl-2">
+              {/* <li className="nav-item">
+                <NavLink href="/watch" className="text-uppercase px-1 mx-1 px-xl-2 mx-xl-2">
                   <img src={Watch} alt="Watch NavItem" width="80" />
                 </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink href="/Learn" className="px-1 mx-1 px-xl-2 mx-xl-2">
-                  <img src={Learn} alt="Learn NavItem" width="80" />
+              </li> */}
+              <li className="nav-item my-2">
+                <NavLink href="/Learn" 
+								className="text-uppercase rounded fw-semibold text-white px-3 py-2 d-flex align-items-center"
+								style={{backgroundColor: "#ea8bb8"}}
+								>Fun Facts
                 </NavLink>
               </li>
             </div>
