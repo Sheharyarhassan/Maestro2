@@ -8,12 +8,15 @@ import { bannerCards } from "./CardsBannerData";
 import sliderimage1 from "../../../assets/images/heroBackground.jpg";
 import noteImage from "../../../assets/images/Images-Maestro/New Assets/Note.png";
 import musicNotes from "../../../assets/images/Images-Maestro/New Assets/MusicNotes.png"
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [selectedCard, setSelectedCard] = useState("");
+  const navigate = useNavigate();
   console.log("SeelctedArea", selectedCard);
   const handleCardClick = (heading) => {
     setSelectedCard(heading); // Set the clicked card's heading as the selected value
+    navigate('/hildey')
   };
   const HeaderStyle = {
     backgroundColor: '#f6cf37',

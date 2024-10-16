@@ -2,7 +2,7 @@ import React from "react";
 
 const RhythmBanner = () => {
 	const rhythmBannerStyle = {
-		backgroundColor: "#1ccb49",
+		backgroundColor: "#ef5130",
 		height: "36vh",
 		display:'flex',
 		justifyContent:'center',

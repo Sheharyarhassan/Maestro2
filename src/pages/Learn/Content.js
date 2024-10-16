@@ -12,8 +12,8 @@ export const content = [
 	},
 	{
 		id: 3,
-		Image: require("../../assets/images/Images-Maestro/New Assets/Hollywood_Cone_Ice_Cream_Truck.png"),
-        Details:"Do you know the sound of the  ice cream van?"
+		Image: require("../../assets/images/Images-Maestro/New Assets/Frog.jpg"),
+        Details:"Did you know who wrote songs for The Princess and the Frog?"
 	},
 	{
 		id: 4,
@@ -27,8 +27,8 @@ export const content = [
 	},
 	{
 		id: 6,
-		Image: require("../../assets/images/Images-Maestro/New Assets/Hollywood_Cone_Ice_Cream_Truck.png"),
-        Details:"Do you know the sound of the  ice cream van?"
+		Image: require("../../assets/images/Images-Maestro/New Assets/Frog.jpg"),
+        Details:"Did you know who wrote songs for The Princess and the Frog?"
 	},
 	{
 		id: 7,
@@ -42,7 +42,7 @@ export const content = [
 	},
 	{
 		id: 9,
-		Image: require("../../assets/images/Images-Maestro/New Assets/Hollywood_Cone_Ice_Cream_Truck.png"),
-        Details:"Do you know the sound of the  ice cream van?"
+		Image: require("../../assets/images/Images-Maestro/New Assets/Frog.jpg"),
+        Details:"Did you know who wrote songs for The Princess and the Frog?"
 	},
 ];

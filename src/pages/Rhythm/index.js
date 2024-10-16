@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import RhythmBanner from "./RhythmBanner";
-import musicElement from "../../assets/images/Images-Maestro/New Assets/ElementMusic2.png"
+import musicElement from "../../assets/images/Images-Maestro/New Assets/imageElement1.png"
 const Index = () => {
   document.title = " Rhythm- Young Maestro";
   useEffect(() => {

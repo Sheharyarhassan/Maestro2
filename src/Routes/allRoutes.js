@@ -27,8 +27,8 @@ const authProtectedRoutes = [
 
 const publicRoutes = [
 
-  { path: "/portal", component: <OnePage /> },
-  {path:"/", component: <Hildey/>},
+  { path: "/", component: <OnePage /> },
+  {path:"/hildey", component: <Hildey/>},
   { path: "/login", component: <Hildey /> },
   // { path: "/register", component: <Register /> },
   // { path: "/categories", component: <Categories /> },
