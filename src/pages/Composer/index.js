@@ -134,7 +134,7 @@ const index = () => {
 			{showNextSection && (
 				<div style={{ height: "100%"}}>
 					<BannerSection />
-					<div className="mt-5 pt-5" style={{backgroundColor: "#f4e652",position:'relative', overflowX:'hidden'}}>
+					<div className="mt-5 pt-5" style={{backgroundColor: "#f4e652",position:'relative', overflowX:'hidden',minHeight:'130vh'}}>
             <img className="position-absolute" style={{left:'-2%',top:'24%'}} src={leftgreen}/>
             <img className="position-absolute" style={{left:'4%',top:'44%'}} src={leftblue}/>
             <img className="position-absolute" style={{left:'-2%',top:'70%'}} src={leftgreenbottom}/>

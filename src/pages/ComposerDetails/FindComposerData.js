@@ -1,5 +1,5 @@
 
-export const tabContent = {
+export const tabContent1 = {
   "1": [
     {
       

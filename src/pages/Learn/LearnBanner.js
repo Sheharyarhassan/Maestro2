@@ -1,19 +1,26 @@
 import React from "react";
-import BannerImage from "../../assets/images/Images-Maestro/banner-learn.png";
-import BannerImageMobile from "../../assets/images/Images-Maestro/Banner-Learn-Mobile.jpg";
-
-import { Button, Container, Input, Label } from "reactstrap";
 
 const LearnBanner = () => {
-    return (
-        <>
-            <div className="w-100 position-relative">
-                <h1 className="text-center text-dark position-absolute top-50 start-50 translate-middle display-5 display-sm-4 text-uppercase fw-extrabold">Learn</h1>
-                <img className="w-100 d-lg-block d-none" src={BannerImage} />
-                <img className="w-100 d-lg-none d-block" src={BannerImageMobile} />
-            </div>
-        </>
-    )
+    const LearnBannerStyle = {
+		backgroundColor: "#ea8bb8",
+		height: "36vh",
+	};
+	return (
+		<React.Fragment>
+			<div style={LearnBannerStyle}>
+				<div className="text-center pt-5">
+					<h1 className="text-white fw-bold pt-5">Fun Facts</h1>
+					<div className="container px-5">
+						<h4 className="text-white fw-semibold">
+							Ebitat faccum volupid eos as as maximaio. Nam fugit, qui omnis aut
+							la velictis cumet unt. Et adipicia qui od molupta sintist et
+							dolupti stempore omniaspiente oditas.
+						</h4>
+					</div>
+				</div>
+			</div>
+		</React.Fragment>
+	);
 }
 
 export default LearnBanner

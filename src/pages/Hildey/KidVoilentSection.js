@@ -17,7 +17,7 @@ const KidVoilentSection = () => {
 							src={KidViolin} />
 					</div>
 					<div class="col-lg-6 bg-white p-0 rounded-end-3 px-xxl-5">
-						<div class="p-xxl-5 ps-md-4 p-2">
+						<div class="p-xxl-3 ps-md-4 p-2">
 							<small class="text-body-tertiary"> Medici </small>
 							<h4 class="fw-semibold mb-2 mb-lg-4">
 								Gitae. Nequi quos aut a solores Medici
