@@ -99,7 +99,7 @@ const Footer = ({ publicRoute }) => {
 									</li>
 									<li className="ps-2 pe-2 ">
 										<h5 className="mb-0">
-											<Link to="/portal" className="text-black fw-semibold">
+											<Link to="/" className="text-black fw-semibold">
 												Portal
 											</Link>
 										</h5>
