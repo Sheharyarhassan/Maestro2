@@ -8,14 +8,14 @@ const InstrumentModal = ({ isOpen, toggle }) => {
 				toggle={toggle}
 				className="bg-black text-white instrument"></ModalHeader>
 			<ModalBody className="bg-black p-0">
-				<Row className="py-5 px-5 justify-content-between">
-					<Col lg={5}>
-						<img src={image} alt="Instrument" className="w-100" />
+				<Row className="py-5 px-5 justify-content-between align-items-center">
+					<Col lg={5} className="d-flex justify-content-end">
+						<img src={image} alt="Instrument" className="mw-100 h-auto" />
 					</Col>
-					<Col lg={5}>
-						<h5 className="text-white text-uppercase">BRASS SECTION</h5>
-						<h3 className="text-white text-uppercase">FRENCH HORN</h3>
-						<p className="text-white w-75">
+					<Col lg={6}>
+						<h4 className="text-white text-uppercase fw-morebold">BRASS SECTION</h4>
+						<h1 className="text-white text-uppercase fw-extrabold">FRENCH HORN</h1>
+						<p className="text-white fw-light fs-5">
 							The French horn is a brass instrument with a long, coiled tube and
 							a wide bell at the end, which makes a rich, warm sound. To play
 							it, you buzz your lips into the mouthpiece and use your right hand

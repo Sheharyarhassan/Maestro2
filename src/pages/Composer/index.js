@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import mainImage from "../../assets/images/Images-Maestro/New Assets/8c.jpg";
 import bach from "../../assets/images/Images-Maestro/New Assets/Johann_Sebastian_Bach_OUTLINE.png";
 import frederic from "../../assets/images/Images-Maestro/New Assets/Frederic Chopin_OUTLINE.png";
@@ -6,25 +6,36 @@ import boulanger from "../../assets/images/Images-Maestro/New Assets/Boulanger_O
 import mozart from "../../assets/images/Images-Maestro/New Assets/Mozart cutout white outline.png";
 import BannerSection from "../ComposerDetails/BannerSection";
 import { tabContent } from "./ComposerCategory";
-import { Card, CardBody, Col, Container, Nav, NavItem, NavLink, Row, TabContent, TabPane } from "reactstrap";
+import {
+	Card,
+	CardBody,
+	Col,
+	Container,
+	Nav,
+	NavItem,
+	NavLink,
+	Row,
+	TabContent,
+	TabPane,
+} from "reactstrap";
 import classnames from "classnames";
-import categoryBg from "../../assets/images/Images-Maestro/New Assets/ComposerBg.png"
-import leftgreen from '../../assets/images/Images-Maestro/New Assets/leftgreennote.png';
-import leftblue from '../../assets/images/Images-Maestro/New Assets/leftbluenote.png'
-import leftgreenbottom from '../../assets/images/Images-Maestro/New Assets/leftbottomgreen.png'
-import rightgreen from '../../assets/images/Images-Maestro/New Assets/rightgreennote.png'
-import rightorange from '../../assets/images/Images-Maestro/New Assets/rightorangenote.png'
-import rightblue from '../../assets/images/Images-Maestro/New Assets/rightbluenote.png'
-import rightbottomorange from '../../assets/images/Images-Maestro/New Assets/rightorangebottom.png'
+import categoryBg from "../../assets/images/Images-Maestro/New Assets/ComposerBg.png";
+import leftgreen from "../../assets/images/Images-Maestro/New Assets/leftgreennote.png";
+import leftblue from "../../assets/images/Images-Maestro/New Assets/leftbluenote.png";
+import leftgreenbottom from "../../assets/images/Images-Maestro/New Assets/leftbottomgreen.png";
+import rightgreen from "../../assets/images/Images-Maestro/New Assets/rightgreennote.png";
+import rightorange from "../../assets/images/Images-Maestro/New Assets/rightorangenote.png";
+import rightblue from "../../assets/images/Images-Maestro/New Assets/rightbluenote.png";
+import rightbottomorange from "../../assets/images/Images-Maestro/New Assets/rightorangebottom.png";
 
 const index = () => {
-  const imageBg ={
-    backgroundImage:`url(${categoryBg})`,
-    backgroundPosition:'center center',
-    backgroundSize:'cover',
-    backgroundRepeat:'no-repeat',
-    maxWidth:'100%',
-  }
+	const imageBg = {
+		backgroundImage: `url(${categoryBg})`,
+		backgroundPosition: "center center",
+		backgroundSize: "cover",
+		backgroundRepeat: "no-repeat",
+		maxWidth: "100%",
+	};
 	const [customActiveTab, setCustomActiveTab] = useState("1");
 
 	const toggleCustom = (tab) => {
@@ -34,8 +45,6 @@ const index = () => {
 	};
 
 	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
-	// Create a filtered tabContent array for each letter in the alphabet
 	alphabet.forEach((char, index) => {
 		tabContent[index + 2] = tabContent["1"].filter((item) =>
 			item.Name.trim().startsWith(char)
@@ -49,6 +58,14 @@ const index = () => {
 		false,
 	]);
 	const [showNextSection, setShowNextSection] = useState(false);
+	const [imagesLoaded, setImagesLoaded] = useState(false);
+	const imageRefs = useRef([
+		React.createRef(),
+		React.createRef(),
+		React.createRef(),
+		React.createRef(),
+	]);
+
 	const mainSection = {
 		backgroundImage: `url(${mainImage})`,
 		height: "90vh",
@@ -62,7 +79,6 @@ const index = () => {
 	};
 
 	const handleVisibility = () => {
-		// Delays for images
 		[500, 1500, 2500, 3500].forEach((delay, index) => {
 			setTimeout(() => {
 				setVisibleImages((prev) => {
@@ -72,16 +88,32 @@ const index = () => {
 				});
 			}, delay);
 		});
-
-		// Delay to switch to next section
 		setTimeout(() => {
 			setShowNextSection(true);
-		}, 4500); // Adjust timing to match your needs
+		}, 4500);
+	};
+	const checkImagesLoaded = () => {
+		const allLoaded = imageRefs.current.every((ref) => ref.current.complete);
+		if (allLoaded) {
+			setImagesLoaded(true);
+		}
 	};
 
 	useEffect(() => {
-		handleVisibility();
+		imageRefs.current.forEach((ref) => {
+			ref.current.onload = checkImagesLoaded;
+		});
+		checkImagesLoaded();
 	}, []);
+
+	useEffect(() => {
+		if (imagesLoaded) {
+			handleVisibility();
+		}
+	}, [imagesLoaded]);
+	// useEffect(() => {
+	// 	handleVisibility();
+	// }, []);
 
 	const imageStyles = (index) => {
 		const styles = [
@@ -124,31 +156,70 @@ const index = () => {
 		<React.Fragment>
 			{!showNextSection && (
 				<div style={mainSection} className="ComposerMainSection">
-					<img style={imageStyles(0)} className="bachImage" src={bach} alt="Bach" />
-					<img style={imageStyles(1)} className="fredericImage" src={frederic} alt="Frederic" />
-					<img style={imageStyles(2)} className="boulangerImage" src={boulanger} alt="Boulanger" />
-					<img style={imageStyles(3)} className="mozartImage" src={mozart} alt="Mozart" />
+					{imageRefs.current.map((ref, index) => (
+						<img
+							key={index}
+							ref={ref}
+							src={[bach, frederic, boulanger, mozart][index]}
+							alt={`Image ${index + 1}`}
+							style={imageStyles(index)}
+						/>
+					))}
 				</div>
 			)}
-
 			{showNextSection && (
-				<div style={{ height: "100%"}}>
+				<div style={{ height: "100%" }}>
 					<BannerSection />
-					<div className="mt-5 pt-5" style={{backgroundColor: "#f4e652",position:'relative', overflowX:'hidden',minHeight:'130vh'}}>
-            <img className="position-absolute" style={{left:'-2%',top:'24%'}} src={leftgreen}/>
-            <img className="position-absolute" style={{left:'4%',top:'44%'}} src={leftblue}/>
-            <img className="position-absolute" style={{left:'-2%',top:'70%'}} src={leftgreenbottom}/>
-            <img className="position-absolute" style={{right:'1%',top:'17%'}} src={rightgreen}/>
-            <img className="position-absolute" style={{right:'2.5%',top:'24%'}} src={rightorange}/>
-            <img className="position-absolute" style={{right:'-2%',top:'50%'}} src={rightblue}/>
-            <img className="position-absolute" style={{right:'-.25%',top:'85%'}} src={rightbottomorange}/>
+					<div
+						className="mt-5 pt-5"
+						style={{
+							backgroundColor: "#f4e652",
+							position: "relative",
+							overflowX: "hidden",
+							minHeight: "130vh",
+						}}>
+						<img
+							className="position-absolute"
+							style={{ left: "-2%", top: "24%" }}
+							src={leftgreen}
+						/>
+						<img
+							className="position-absolute"
+							style={{ left: "4%", top: "44%" }}
+							src={leftblue}
+						/>
+						<img
+							className="position-absolute"
+							style={{ left: "-2%", top: "70%" }}
+							src={leftgreenbottom}
+						/>
+						<img
+							className="position-absolute"
+							style={{ right: "1%", top: "17%" }}
+							src={rightgreen}
+						/>
+						<img
+							className="position-absolute"
+							style={{ right: "2.5%", top: "24%" }}
+							src={rightorange}
+						/>
+						<img
+							className="position-absolute"
+							style={{ right: "-2%", top: "50%" }}
+							src={rightblue}
+						/>
+						<img
+							className="position-absolute"
+							style={{ right: "-.25%", top: "85%" }}
+							src={rightbottomorange}
+						/>
 
-						<Container >
+						<Container>
 							<Row>
 								<Col>
 									<div className="galleryContent">
-										<h3 className="text-primary fw-morebold">FIND COMPOSERS</h3>
-										<h3 className="text-dark fw-morebold">A-Z of composers.</h3>
+										<h3 className="text-primary fw-bold">FIND COMPOSERS</h3>
+										<h3 className="text-dark fw-bold">A-Z of composers.</h3>
 									</div>
 								</Col>
 								<Card style={{ background: "transparent", boxShadow: "none" }}>
@@ -164,7 +235,7 @@ const index = () => {
 														color:
 															customActiveTab === "1"
 																? "rgb(0,159,227)"
-																: "rgb(0 0 0 / 40%)",
+																: "rgb(0 0 0)",
 													}}
 													className={classnames({
 														active: customActiveTab === "1",
@@ -179,7 +250,7 @@ const index = () => {
 														style={{
 															cursor: "pointer",
 															fontWeight: "bold",
-                              padding:'0.5rem 0.5rem',
+															padding: "0.5rem 0.5rem",
 															color:
 																customActiveTab === (index + 2).toString()
 																	? "rgb(0,159,227)"
@@ -208,25 +279,34 @@ const index = () => {
 															tabContent[tabId].map((item, index) => (
 																<div key={index} className="cnt-wrapper mb-4">
 																	<h5
-																		style={{ color: "rgb(0,159,227)" }}
-																		className="text-uppercase fw-semibold text-primary mb-0 fw-bold">
+																		className="text-uppercase text-primary mb-0 fw-bold">
 																		{item.Name}
 																	</h5>
-																	<h5 className="text-dark fw-bold fs-5">
+																	<h5 className="text-dark fw-morebold fs-5">
 																		{item.Period}
 																	</h5>
-                                  <NavLink href="/composerdetails">
-                                    <Row>
-                                      <Col lg={2} md={3} className="position-relative">
-                                      <div style={imageBg} className="rounded-3 d-flex justify-content-center">
-                                        <img className="mw-100 h-auto px-2 pt-2" src={item.Image}/>
-                                      </div>
-                                      </Col>
-                                      <Col lg={10} md={9}>
-                                        <h5 className="text-dark mt-2 fw-normal">{item.Details}</h5>
-                                      </Col>
-                                    </Row>
-                                  </NavLink>
+																	<NavLink href="/composerdetails">
+																		<Row>
+																			<Col
+																				lg={2}
+																				md={3}
+																				className="position-relative">
+																				<div
+																					style={imageBg}
+																					className="rounded-3 d-flex justify-content-center">
+																					<img
+																						className="mw-100 h-auto px-2 pt-2"
+																						src={item.Image}
+																					/>
+																				</div>
+																			</Col>
+																			<Col lg={10} md={9}>
+																				<h5 className="text-dark mt-2 fw-medium">
+																					{item.Details}
+																				</h5>
+																			</Col>
+																		</Row>
+																	</NavLink>
 																</div>
 															))
 														) : (

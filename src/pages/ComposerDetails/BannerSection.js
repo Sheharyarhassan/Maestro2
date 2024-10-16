@@ -18,14 +18,14 @@ const BannerSection = () => {
     <div className="bannerMainSection" style={backgroundStyle}>
      <Container>
         <Row className="justify-content-center">
-          <Col sm={10} lg={8} className="text-center">
+          <Col sm={10} className="text-center">
             {" "}
-            <h2 className="text-white"> Composers</h2>
-            <h4 className="text-white">
+            <h1 className="text-white fw-bold"> Composers</h1>
+            <h3 className="text-white fw-light">
               Ebitat faccum volupid eos as as maximaio. Nam fugit, qui omnis aut
               la velictis cumet unt. Et adipicia qui od molupta sintist et
               dolupti stempore omniaspiente oditas.
-            </h4>
+            </h3>
           </Col>
         </Row>
       </Container>

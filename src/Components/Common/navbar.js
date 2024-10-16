@@ -124,7 +124,7 @@ const Navbar = ({publicRoute}) => {
               <NavLink
 								className="rounded-3 text-white text-uppercase fw-semibold px-4 py-1 d-flex align-items-center me-2"
 								style={{backgroundColor: "#41b2d8", height: "fit-content"}}
-								href="/hildey">
+								href="/game">
 								Game
 							</NavLink>
               </li>
@@ -148,13 +148,8 @@ const Navbar = ({publicRoute}) => {
 								>COMPOSERS
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink href="/watch" className="text-uppercase px-1 mx-1 px-xl-2 mx-xl-2">
-                  <img src={Watch} alt="Watch NavItem" width="80" />
-                </NavLink>
-              </li> */}
               <li className="nav-item my-2">
-                <NavLink href="#" 
+                <NavLink href="/learn" 
 								className="text-uppercase rounded fw-semibold text-white px-4 py-1 d-flex align-items-center"
 								style={{backgroundColor: "#ea8bb8"}}
 								>Learn

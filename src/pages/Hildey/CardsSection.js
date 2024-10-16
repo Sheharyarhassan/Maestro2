@@ -10,7 +10,7 @@ import Boxes5 from "../../assets/images/Images-Maestro/New Assets/boxes5.jpg";
 const CardsSection = () => {
   const BackgroundStyle = {
     background:
-      "linear-gradient(180deg, rgba(71,186,212,1) 0%, rgba(96,214,196,1) 75%)",
+      "linear-gradient(180deg, rgba(71,186,212) 0%, rgba(96,214,196) 90%)",
     // height: "100vh",
     position: "relative",
     width: "100%",
@@ -42,22 +42,22 @@ const CardsSection = () => {
         <div className="row">
           <div className="col-12">
             <div className="Content text-center">
-              <h4 className="text-white">
+              <h2 className="text-white">
                 ARE YOU READY TO FACE THE MONSTER MASH-UP MACHINE?
-              </h4>
-              <h5 className=" text-white">
+              </h2>
+              <h4 className=" text-white fw-normal">
                 In order to prepare, you must achieve Maestro level in three
                 categories first:
                 <br /> Elements of Music, Instruments and Composers.
                 <br />
                 Don’t worry, you’re not alone. You have help.
-              </h5>
+              </h4>
             </div>
           </div>
           <div className="col-12 ">
             <div className="text-center">
               <img src={Chick} alt="chick" className="mw-100 h-auto" />
-              <h1 className="text-white">HILDEY</h1>
+              <h1 className="text-white super-bubble">HILDEY</h1>
             </div>
           </div>
 
@@ -65,8 +65,8 @@ const CardsSection = () => {
             <div className="row">
               <div className="col-12 col-md-6 col-lg-4 mt-4">
                 <div className="card-box text-center">
-                  <h2 className="text-white">STAGE 1</h2>
-                  <p className="text-white mb-0">Elements of Music</p>
+                  <h2 className="text-white super-bubble">STAGE 1</h2>
+                  <h4 className="text-white mb-1">Elements of Music</h4>
                   <img
                     src={Boxes}
                     className="mw-100 h-auto rounded-3"
@@ -76,8 +76,8 @@ const CardsSection = () => {
               </div>
               <div className="col-12 col-md-6 col-lg-4 mt-4">
                 <div className="card-box text-center">
-                  <h2 className="text-white">STAGE 2</h2>
-                  <p className="text-white mb-0">Elements of Music</p>
+                  <h2 className="text-white super-bubble">STAGE 2</h2>
+                  <h4 className="text-white mb-1">Instruments</h4>
                   <img
                     src={Boxes2}
                     className="mw-100 h-auto rounded-3"
@@ -87,8 +87,8 @@ const CardsSection = () => {
               </div>
               <div className="col-12 col-md-6 col-lg-4 mt-4">
                 <div className="card-box text-center">
-                  <h2 className="text-white">STAGE 3</h2>
-                  <p className="text-white mb-0">Elements of Music</p>
+                  <h2 className="text-white super-bubble">STAGE 3</h2>
+                  <h4 className="text-white mb-1">Composers</h4>
                   <img
                     src={Boxes3}
                     className="mw-100 h-auto rounded-3"
@@ -98,8 +98,8 @@ const CardsSection = () => {
               </div>
               <div className="col-12 col-md-6 col-lg-4 mt-4">
                 <div className="card-box text-center">
-                  <h2 className="text-white">STAGE 4</h2>
-                  <p className="text-white mb-0">Elements of Music</p>
+                  <h2 className="text-white super-bubble">STAGE 4</h2>
+                  <h4 className="text-white mb-1">Fun Facts</h4>
                   <img
                     src={Boxes4}
                     className="mw-100 h-auto rounded-3"
@@ -109,8 +109,8 @@ const CardsSection = () => {
               </div>
               <div className="col-12 col-md-12 col-lg-8 mt-4">
                 <div className="card-box text-center">
-                  <h2 className="text-white">STAGE 5</h2>
-                  <p className="text-white mb-0">Elements of Music</p>
+                  <h2 className="text-white super-bubble">STAGE 5</h2>
+                  <h4 className="text-white mb-1">Monster Mash-Up Machine</h4>
                   <img
                     src={Boxes5}
                     className="mw-100 h-auto rounded-3"

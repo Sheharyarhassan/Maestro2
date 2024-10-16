@@ -110,8 +110,8 @@ const GallerySection = () => {
 					<Row>
 						<Col sm="12" className="ps-4">
 							<div className="galleryContent">
-								<h3 className="text-primary fw-morebold">FIND COMPOSERS</h3>
-								<h4 className="text-black fw-morebold">A-Z of composers.</h4>
+								<h3 className="text-primary fw-bold">FIND COMPOSERS</h3>
+								<h4 className="text-black fw-bold">A-Z of composers.</h4>
 							</div>
 						</Col>
 						<Col sm="12">
@@ -130,7 +130,7 @@ const GallerySection = () => {
 													color:
 														customActiveTab === "1"
 															? "rgb(0,159,227)"
-															: "rgb(0 0 0 / 40%)",
+															: "rgb(0 0 0)",
 													borderBottom:
 														customActiveTab === "1"
 															? "4px solid rgb(0,159,227)" // Underline for active tab
@@ -152,7 +152,7 @@ const GallerySection = () => {
 														color:
 															customActiveTab === (index + 2).toString()
 																? "rgb(0,159,227)"
-																: "rgb(0 0 0 / 40%)",
+																: "rgb(0 0 0)",
 														borderBottom:
 															customActiveTab === (index + 2).toString()
 																? "4px solid rgb(0,159,227)" // Underline for active tab
@@ -172,10 +172,10 @@ const GallerySection = () => {
 										<Row>
 											<Col sm="12" className="px-2">
 												<div>
-													<h5 className="mb-1 text-primary fw-semibold">
+													<h5 className="mb-1 text-primary fw-bold">
 														ROMANTIC PERIOD
 													</h5>
-													<h5>1827 - 1900</h5>
+													<h5 className=" text-dark fw-morebold fs-5">1827 - 1900</h5>
 												</div>
 											</Col>
 											<Col sm={12}>
@@ -212,30 +212,30 @@ const GallerySection = () => {
 																						/>
 																					</div>
 																					<div className="p-3 rounded-bottom">
-																						<p className="text-uppercase mb-0">
-																							<span className="fw-bold">
+																						<p className="mb-0">
+																							<span className="fw-morebold">
 																								Name:
 																							</span>{" "}
-																							{item.Name}
+																							<span className="fw-semibold">{item.Name}</span>
 																						</p>
 																						<p className="text-dark mb-0">
-																							<span className="fw-bold">
+																							<span className="fw-morebold">
 																								Born:
 																							</span>{" "}
-																							{item.Born}
+																							<span className="fw-semibold">{item.Born}</span>
 																						</p>
 																						<p className="text-dark mb-0">
-																							<span className="fw-bold">
+																							<span className="fw-morebold">
 																								{" "}
-																								PlaceoBirth:
+																								PoB:
 																							</span>{" "}
-																							{item.Pob}
+																							<span className="fw-semibold">{item.Pob}</span>
 																						</p>
 																						<p className="text-dark mb-0">
-																							<span className="fw-bold">
+																							<span className="fw-morebold">
 																								Period:
 																							</span>{" "}
-																							{item.Period}
+																							<span className="fw-semibold">{item.Period}</span>
 																						</p>
 																					</div>
 																				</CardBody>
@@ -254,8 +254,8 @@ const GallerySection = () => {
 													))}
 												</TabContent>
 											</Col>
-											<Col sm={12} className="text-black text-center">
-												<h5 className="fw-bold">Load More</h5>
+											<Col sm={12} className="text-center">
+												<h5 className="text-dark fw-bold">Load More</h5>
 											</Col>
 										</Row>
 									</div>

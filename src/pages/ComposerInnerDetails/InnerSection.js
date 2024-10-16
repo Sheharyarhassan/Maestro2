@@ -21,7 +21,7 @@ const InnerSection = () => {
       <Container>
         <Row>
           <Col sm="12">
-            <h1 className="text-dark">Frédéric Chopin</h1>
+            <h1 className="text-dark fw-morebold">Frédéric Chopin</h1>
           </Col>
           <Col lg="5" className="mt-2">
             <div>
@@ -37,19 +37,16 @@ const InnerSection = () => {
                   />
                 </div>
                 <div className="contentBox bg-white p-3 rounded-bottom-4">
-                  <p className="text-dark mb-0">
-                    <span className="fw-bold">Born:</span> March 1st 1810
-                  </p>
-                  <p className="text-dark mb-0">
-                    <span className="fw-bold">Born:</span> October 17th 1849
-                  </p>
-                  <p className="text-dark mb-0">
-                    <span className="fw-bold"> PoBirth:</span> Żelazowa Wola,
+                  <h5 className="text-dark">
+                    <span className="fw-morebold">Born:</span> March 1st 1810
+                  </h5>
+                  <h5 className="text-dark">
+                    <span className="fw-morebold"> PoBirth:</span> Żelazowa Wola,
                     Poland
-                  </p>
-                  <p className="text-dark mb-0">
-                    <span className="fw-bold"> Period:</span> Romantic
-                  </p>
+                  </h5>
+                  <h5 className="text-dark">
+                    <span className="fw-morebold"> Period:</span> Romantic
+                  </h5>
                 </div>
               </div>
 
@@ -73,7 +70,7 @@ const InnerSection = () => {
           </Col>
           <Col lg="7" className="mt-2">
             <div className="contentCard bg-white rounded-4 px-lg-4 px-3 py-5">
-              <h5 className="fw-bold">
+              <h5 className="fw-bold text-dark">
                 Frédéric Chopin (1810–1849) was a Polish composer and virtuoso
                 pianist who is widely regarded as one of the most influential
                 musicians of the Romantic era.

@@ -57,7 +57,7 @@ const Footer = ({ publicRoute }) => {
 								<ul className="list-unstyled d-flex flex-wrap ff-secondary mb-0 justify-content-center align-items-center">
 									<li className="ps-2 pe-2 border-end border-dark align">
 										<h5 className="mb-0">
-											<Link to="/hildey" className="text-black fw-semibold">
+											<Link to="/game" className="text-black fw-semibold">
 												Game
 											</Link>
 										</h5>
@@ -71,7 +71,7 @@ const Footer = ({ publicRoute }) => {
 									</li>
 									<li className="ps-2 pe-2 border-end border-dark">
 										<h5 className="mb-0">
-											<Link to="/rhythm" className="text-black fw-semibold">
+											<Link to="/instruments" className="text-black fw-semibold">
 												Instruments
 											</Link>
 										</h5>
@@ -85,15 +85,22 @@ const Footer = ({ publicRoute }) => {
 									</li>
 									<li className="ps-2 pe-2 border-end border-dark">
 										<h5 className="mb-0">
-											<Link to="/rhythm" className="text-black fw-semibold">
+											<Link to="/learn" className="text-black fw-semibold">
 												Learn
 											</Link>
 										</h5>
 									</li>
-									<li className="ps-2 pe-2">
+									<li className="ps-2 pe-2 border-end border-dark">
 										<h5 className="mb-0">
 											<Link to="/login" className="text-black fw-semibold">
-												login
+												Login
+											</Link>
+										</h5>
+									</li>
+									<li className="ps-2 pe-2 ">
+										<h5 className="mb-0">
+											<Link to="/portal" className="text-black fw-semibold">
+												Portal
 											</Link>
 										</h5>
 									</li>

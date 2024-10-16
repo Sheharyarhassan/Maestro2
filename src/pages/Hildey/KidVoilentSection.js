@@ -16,13 +16,13 @@ const KidVoilentSection = () => {
 							class="mw-100 h-auto rounded-start-3"
 							src={KidViolin} />
 					</div>
-					<div class="col-lg-6 bg-white p-0 rounded-end-3 px-xxl-5">
-						<div class="p-xxl-3 ps-md-4 p-2">
+					<div class="col-lg-6 bg-white rounded-end-3 d-flex justify-content-center align-items-center px-lg-5 py-lg-0 py-3">
+						<div class="px-3">
 							<small class="text-body-tertiary"> Medici </small>
-							<h4 class="fw-semibold mb-2 mb-lg-4">
+							<h4 class="fw-semibold mb-2 mb-lg-4 text-dark">
 								Gitae. Nequi quos aut a solores Medici
 							</h4>
-							<h5 class="lh-base">
+							<h5 class="lh-base text-dark">
 								Hic tempore rciatiat voluptatum ent quunt ex enis auda quaesti
 								dis inctae voluptat omnis dolent molessunt, sincips anturei um
 								et Et essi ullatem int. Quae dolupti nciumquo eost maxim
