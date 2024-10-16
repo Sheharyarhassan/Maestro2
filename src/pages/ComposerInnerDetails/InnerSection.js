@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "reactstrap";
 import ComposerBg from "../../assets/images/Images-Maestro/New Assets/ComposerBg.png";
 import ComposerImage from "../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png";
 import playbarComposer from "../../assets/images/Images-Maestro/New Assets/playbarComposer.png";
-import ComposerModelImage from "../../assets/images/Images-Maestro/New Assets/CompserModalImage.png"
+import ComposerModelImage from "../../assets/images/Images-Maestro/New Assets/CompserModalImage.png";
+import ComposerInnerDetailModal from "./ComposerInnerDetailModal";
 const InnerSection = () => {
   const mainSectionStyle = {
     backgroundColor: "#f4e652",
@@ -13,6 +14,8 @@ const InnerSection = () => {
     backgroundSize: "cover",
     backgroundPosition: "center center",
   };
+  const [modalOpen, setModalOpen] = useState(false);
+  const toggleModal = () => setModalOpen(!modalOpen);
   return (
     <div className="mainSection w-100 py-5" style={mainSectionStyle}>
       <Container>
@@ -50,14 +53,21 @@ const InnerSection = () => {
                 </div>
               </div>
 
-              <div className="composerVideoCard mt-4">
+              <div className="composerVideoCard mt-4" onClick={toggleModal}>
                 <h5>Example</h5>
-              <img src={ComposerModelImage} className="mw-100 h-auto w-100" alt="composer"/>
+                <img
+                  src={ComposerModelImage}
+                  className="mw-100 h-auto w-100"
+                  alt="composer"
+                />
               </div>
               <h5 className="mt-4">Example</h5>
-              <div className="playBar bg-white px-3 py-1 rounded-5" >
-            
-                <img src={playbarComposer} alt="playbar" className="mw-100 h-auto"/>
+              <div className="playBar bg-white px-3 py-1 rounded-5">
+                <img
+                  src={playbarComposer}
+                  alt="playbar"
+                  className="mw-100 h-auto"
+                />
               </div>
             </div>
           </Col>
@@ -111,8 +121,18 @@ const InnerSection = () => {
                 classical music.
               </h5>
 
-              <button className="mt-4 btn btn-success mb-0">VIEW LEARNING MATERIAL</button>
+              <button
+                className="mt-4 btn mb-0"
+                style={{ backgroundColor: "#1ccb49", color: "white" }}
+              >
+                VIEW LEARNING MATERIAL
+              </button>
             </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm="12">
+            <ComposerInnerDetailModal isOpen={modalOpen} toggle={toggleModal} />
           </Col>
         </Row>
       </Container>

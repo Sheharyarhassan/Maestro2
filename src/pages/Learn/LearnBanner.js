@@ -4,12 +4,15 @@ const LearnBanner = () => {
     const LearnBannerStyle = {
 		backgroundColor: "#ea8bb8",
 		height: "36vh",
+		display:'flex',
+		justifyContent:'center',
+		alignItems:'center'
 	};
 	return (
 		<React.Fragment>
 			<div style={LearnBannerStyle}>
-				<div className="text-center pt-5">
-					<h1 className="text-white fw-bold pt-5">Fun Facts</h1>
+				<div className="text-center">
+					<h1 className="text-white fw-bold">Fun Facts</h1>
 					<div className="container px-5">
 						<h4 className="text-white fw-semibold">
 							Ebitat faccum volupid eos as as maximaio. Nam fugit, qui omnis aut
