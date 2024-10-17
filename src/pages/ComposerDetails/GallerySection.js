@@ -114,10 +114,8 @@ const GallerySection = () => {
 								<h4 className="text-black fw-bold">A-Z of composers.</h4>
 							</div>
 						</Col>
-						<Col sm="12">
 							<Card
-								style={{ background: "transparent", boxShadow: "none" }}
-								className="px-0 w-100">
+								style={{ background: "transparent", boxShadow: "none" }}>
 								<CardBody className="p-0 glosarry-tabs-wrapper">
 									<Nav
 										tabs
@@ -149,6 +147,7 @@ const GallerySection = () => {
 													style={{
 														cursor: "pointer",
 														fontWeight: "bold",
+														padding: "0.5rem 0.5rem",
 														color:
 															customActiveTab === (index + 2).toString()
 																? "rgb(0,159,227)"
@@ -261,7 +260,7 @@ const GallerySection = () => {
 									</div>
 								</CardBody>
 							</Card>
-						</Col>
+
 					</Row>
 				</Container>
 			</div>

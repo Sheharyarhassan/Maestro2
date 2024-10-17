@@ -27,7 +27,7 @@ import rightgreen from "../../assets/images/Images-Maestro/New Assets/rightgreen
 import rightorange from "../../assets/images/Images-Maestro/New Assets/rightorangenote.png";
 import rightblue from "../../assets/images/Images-Maestro/New Assets/rightbluenote.png";
 import rightbottomorange from "../../assets/images/Images-Maestro/New Assets/rightorangebottom.png";
-
+import audioFile from "../../assets/images/Images-Maestro/New Assets/composers.mp3";
 const index = () => {
 	const imageBg = {
 		backgroundImage: `url(${categoryBg})`,
@@ -152,14 +152,28 @@ const index = () => {
 			transition: "opacity 1s ease-in",
 		};
 	};
+	const audioRef = useRef(null);
+	useEffect(() => {  
+    const handlePlay = async () => {  
+      try {  
+          audioRef.current.muted = false;
+      } catch (error) {  
+        console.error("Audio playback failed:", error);  
+      }  
+    };  
+
+    handlePlay();  
+  }, []);  
 	return (
 		<React.Fragment>
+			<audio ref={audioRef} src={audioFile} muted autoPlay/>
 			{!showNextSection && (
 				<div style={mainSection} className="ComposerMainSection">
 					{imageRefs.current.map((ref, index) => (
 						<img
 							key={index}
 							ref={ref}
+							className={["bachImage","fredericImage","boulangerImage","mozartImage"][index]}
 							src={[bach, frederic, boulanger, mozart][index]}
 							alt={`Image ${index + 1}`}
 							style={imageStyles(index)}
