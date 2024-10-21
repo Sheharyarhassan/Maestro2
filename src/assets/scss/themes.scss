@@ -18,7 +18,12 @@
     filter: invert(1) grayscale(100%) brightness(200%);
   }
 }
-
+.modal-header-dark {
+  .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    background: transparent var(--vz-btn-close-bg) center/2em auto no-repeat !important;
+  }
+}
 body {
   * {
     outline: none;

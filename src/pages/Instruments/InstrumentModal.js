@@ -6,7 +6,7 @@ const InstrumentModal = ({ isOpen, toggle }) => {
 		<Modal size="xl" isOpen={isOpen} toggle={toggle} centered>
 			<ModalHeader
 				toggle={toggle}
-				className="bg-black text-white instrument"></ModalHeader>
+				className="bg-black text-white instrument modal-header-dark"></ModalHeader>
 			<ModalBody className="bg-black p-0">
 				<Row className="py-5 px-5 justify-content-between align-items-center">
 					<Col lg={5} className="d-flex justify-content-end">
