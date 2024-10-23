@@ -17,6 +17,12 @@ const InnerSection = () => {
     backgroundSize: "cover",
     backgroundPosition: "center center",
   };
+  const imageBoxdummy = {
+    backgroundImage: `url(${ComposerBg})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center center",
+    height:"250px"
+  }
   const [modalOpen, setModalOpen] = useState(false);
   const toggleModal = () => setModalOpen(!modalOpen);
 
@@ -49,13 +55,14 @@ const InnerSection = () => {
               <div className="composerCard">
                 <div
                   className="imageBox rounded-top-3 text-center"
-                  style={imageBox}
+                  style={composer.innerImage ? imageBox: imageBoxdummy}
                 >
-                  <img
+                  {composer.innerImage && <img
                     src={composer.innerImage}
                     alt="composer"
                     className="w-75 h-auto"
                   />
+                  }
                 </div>
                 <div className="contentBox bg-white p-3 rounded-bottom-3">
                   <h5 className="text-dark">
@@ -65,11 +72,10 @@ const InnerSection = () => {
                     <span className="fw-morebold">Died:</span> {composer.Died}
                   </h5>
                   <h5 className="text-dark">
-                    <span className="fw-morebold"> PoB:</span> Żelazowa Wola,
-                    Poland
+                    <span className="fw-morebold">PoB:</span> xxx
                   </h5>
                   <h5 className="text-dark">
-                    <span className="fw-morebold"> Period:</span> {composer.Name}
+                    <span className="fw-morebold">Period:</span> {composer.Name}
                   </h5>
                 </div>
               </div>
