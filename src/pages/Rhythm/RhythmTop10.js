@@ -1,27 +1,10 @@
 import React, { useState, useEffect } from "react";
-import {
-	Button,
-	Card,
-	CardBody,
-	Col,
-	Collapse,
-	Container,
-	Row,
-} from "reactstrap";
+import { Button, Col, Collapse, Container, Row } from "reactstrap";
 import CardImage from "../../assets/images/Images-Maestro/New Assets/ComposerBg.png";
-import { Top10data, accordianData } from "./RhythmData";
-import RhythmModal from "./RhythmModal";
+import { accordianData } from "./RhythmData";
 import diagram from "../../assets/images/Images-Maestro/New Assets/Staff diagram with numbers.png";
-
+import player from "../../assets/images/Images-Maestro/New Assets/player.png";
 const RhythmDetails = () => {
-	// const [modalOpen, setModalOpen] = useState(false);
-	// const [selectedItem, setSelectedItem] = useState(null); // State for selected item
-
-	// const toggleModal = (item = null) => {
-	// 	setSelectedItem(item); // Update selected item
-	// 	setModalOpen(!modalOpen);
-	// };
-
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	}, []);
@@ -38,6 +21,27 @@ const RhythmDetails = () => {
 			...prev,
 			[id]: !prev[id],
 		}));
+	};
+	const [audio, setAudio] = useState(null); // State to hold the audio element
+	const [isPlaying, setIsPlaying] = useState(false);
+	const toggleAudio = (audioSrc) => {
+		if (audio) {
+			if (isPlaying) {
+				audio.pause();
+			} else {
+				audio.play();
+			}
+			setIsPlaying(!isPlaying);
+		} else {
+			const newAudio = new Audio(audioSrc);
+			setAudio(newAudio);
+			newAudio.play();
+			setIsPlaying(true);
+
+			newAudio.onended = () => {
+				setIsPlaying(false);
+			};
+		}
 	};
 	return (
 		<React.Fragment>
@@ -66,52 +70,23 @@ const RhythmDetails = () => {
 										style={{ background: "transparent" }}>
 										{item.Details}
 									</div>
-									<div className="ms-3 mt-3">
+									<div className="ms-5 mt-3">
+										<Col className="ms-3" md={5}>
+										<img
+										className="w-100 h-auto"
+											role="button"
+											src={player}
+											onClick={() => toggleAudio(item.audio)}
+										/>
 										<audio src={item.audio} preload="auto"></audio>
+										</Col>
 									</div>
 								</Collapse>
 							</div>
 						))}
 					</div>
-					{/* {Top10data.map((item, index) => (
-					<Col
-						md="6"
-						lg="4"
-						sm="6"
-						xs="12"
-						key={index}
-						// className="mb-4"
-					>
-						<Card
-							className="border-0 shadow-sm"
-							onClick={() => toggleModal(item)}
-							role="button">
-							<CardBody className="p-0">
-								<div
-									className="cardImage d-flex align-items-center justify-content-center rounded-top pb-0"
-									style={cardImageStyle}>
-									<img
-										src={item.Image}
-										alt="composer"
-										className="col-md-4 col-6 h-auto py-4"
-									/>
-								</div>
-								<div className="p-2 rounded-bottom">
-									<p className="mb-0 text-center">
-										<span className="fw-bold">{item.Name}</span>
-									</p>
-								</div>
-							</CardBody>
-						</Card>
-					</Col>
-				))} */}
 				</Row>
 			</Container>
-			{/* <RhythmModal
-				isOpen={modalOpen}
-				toggle={toggleModal}
-				item={selectedItem}
-			/> */}
 		</React.Fragment>
 	);
 };
