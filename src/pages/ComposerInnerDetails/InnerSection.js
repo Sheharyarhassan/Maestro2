@@ -42,7 +42,7 @@ const InnerSection = () => {
       <Container>
         <Row>
           <Col sm="12">
-            <h1 className="text-dark fw-morebold">{composer.Name}</h1>
+            <h1 className="text-dark fw-morebold">{composer.ComposerName}</h1>
           </Col>
           <Col lg="5" className="mt-2">
             <div>
@@ -59,14 +59,17 @@ const InnerSection = () => {
                 </div>
                 <div className="contentBox bg-white p-3 rounded-bottom-3">
                   <h5 className="text-dark">
-                    <span className="fw-morebold">Born:</span> March 1st 1810
+                    <span className="fw-morebold">Born:</span> {composer.Born}
+                  </h5>
+                  <h5 className="text-dark">
+                    <span className="fw-morebold">Died:</span> {composer.Died}
                   </h5>
                   <h5 className="text-dark">
                     <span className="fw-morebold"> PoB:</span> Żelazowa Wola,
                     Poland
                   </h5>
                   <h5 className="text-dark">
-                    <span className="fw-morebold"> Period:</span> Romantic
+                    <span className="fw-morebold"> Period:</span> {composer.Name}
                   </h5>
                 </div>
               </div>
@@ -94,9 +97,9 @@ const InnerSection = () => {
               <h5 className="fw-bold text-dark lh-base">
               {composer.Details}
               </h5>
-              <p className="lh-base"> {composer.innerDetails.split('\n').map((line, index) => (
+              <h5 className="lh-base"> {composer.innerDetails.split('\n').map((line, index) => (
             <><div key={index}>{line}</div> <br/></>
-        ))}</p>
+        ))}</h5>
               <button
                 className="mt-4 btn mb-0 px-3 py-1"
                 style={{ backgroundColor: "#1ccb49", color: "white" }}

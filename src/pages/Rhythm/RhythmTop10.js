@@ -54,7 +54,7 @@ const RhythmDetails = () => {
 						{accordianData.map((item) => (
 							<div key={item.id} className="mb-3">
 								<Button
-									className="d-flex border-0 text-dark align-items-center fw-morebold"
+									className="d-flex border-0 text-dark align-items-center "
 									style={{ background: "transparent" }}
 									onClick={() => toggleAccordion(item.id)}>
 									<div
@@ -62,16 +62,16 @@ const RhythmDetails = () => {
 										className="me-4 rounded-circle avatar-xs border border-dark">
 										<span className="d-flex align-items-center justify-content-center h-100">{item.id}</span>
 									</div>
-									<span>{item.Name}</span>
+									<h5 className="fw-morebold text-dark mb-0">{item.Name}</h5>
 								</Button>
 								<Collapse isOpen={openAccordions[item.id]}>
 									<div
 										className="ms-5 ps-3 text-light fw-light w-75"
 										style={{ background: "transparent" }}>
-										{item.Details}
+										<h5 className="text-light">{item.Details}</h5>
 									</div>
 									<div className="ms-5 mt-3">
-										<Col className="ms-3" xl={3} md={5} xs={10}>
+										<Col className="ms-3" xl={4} md={5} xs={10}>
 										<img
 										className="w-100 h-auto"
 											role="button"

@@ -64,24 +64,24 @@ const Index = () => {
       >
         <img
           src={leftNote}
-          style={{ position: "absolute", top: "20%", left: "-4%" }}
+          style={{ position: "absolute", top: "20%", left: "-4%",width:customActiveTab === "1" ?"130px":'auto' }}
           alt=""
         />
         <img
           src={leftbluenote}
-          style={{ position: "absolute", top: "80%", left: "-0.25%" }}
+          style={{ position: "absolute", top: customActiveTab === "1" ? "55%": "80%", left: "-0.25%"}}
           alt=""
         />
         <img
           src={rightbluenote}
-          style={{ position: "absolute", top: "10%", right: "-2%" }}
+          style={{ position: "absolute", top: "10%", right: "-2%" ,width: customActiveTab === "1" ? '100px':'auto'}}
           alt=""
         />
         <img
           src={rightbottomSingle}
           style={{
             position: "absolute",
-            top: "44%",
+            top: customActiveTab === "1" ? "35%" :"44%",
             right: "2%",
             width: "50px",
           }}
@@ -91,7 +91,7 @@ const Index = () => {
           src={RightbottomDouble}
           style={{
             position: "absolute",
-            top: "50%",
+            top: customActiveTab === "1" ? "40%" :"50%",
             right: "2%",
             width: "20px",
           }}
@@ -99,7 +99,7 @@ const Index = () => {
         />
         <img
           src={chickRhythmbottom}
-          style={{ position: "absolute", top: "68%", right: "5%" }}
+          style={{ position: "absolute",top: customActiveTab === "1" ? "42%" : "68%", right: customActiveTab === "1" ? "10%":"5%" }}
           alt=""
         />
         <Container>
@@ -118,6 +118,7 @@ const Index = () => {
                       style={{
                         cursor: "pointer",
                         fontWeight: "bold",
+                        fontSize:'1rem',
                         color:
                           customActiveTab === "1"
                             ? "rgb(0,159,227)"
@@ -137,6 +138,7 @@ const Index = () => {
                         style={{
                           cursor: "pointer",
                           fontWeight: "bold",
+                          fontSize:'1rem',
                           padding: "0.5rem 0.5rem",
                           color:
                             customActiveTab === (index + 2).toString()

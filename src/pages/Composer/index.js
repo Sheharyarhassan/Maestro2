@@ -246,6 +246,7 @@ const index = () => {
 													style={{
 														cursor: "pointer",
 														fontWeight: "bold",
+														fontSize:'1rem',
 														color:
 															customActiveTab === "1"
 																? "rgb(0,159,227)"
@@ -265,6 +266,7 @@ const index = () => {
 															cursor: "pointer",
 															fontWeight: "bold",
 															padding: "0.5rem 0.5rem",
+															fontSize:'1rem',
 															color:
 																customActiveTab === (index + 2).toString()
 																	? "rgb(0,159,227)"
