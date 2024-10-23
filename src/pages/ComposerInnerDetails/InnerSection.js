@@ -52,9 +52,9 @@ const InnerSection = () => {
                   style={imageBox}
                 >
                   <img
-                    src={composer.Image}
+                    src={composer.innerImage}
                     alt="composer"
-                    className="w-50 h-auto"
+                    className="w-75 h-auto"
                   />
                 </div>
                 <div className="contentBox bg-white p-3 rounded-bottom-3">
@@ -94,7 +94,9 @@ const InnerSection = () => {
               <h5 className="fw-bold text-dark lh-base">
               {composer.Details}
               </h5>
-              <p className="lh-base">{composer.innerDetails}</p>
+              <p className="lh-base"> {composer.innerDetails.split('\n').map((line, index) => (
+            <><div key={index}>{line}</div> <br/></>
+        ))}</p>
               <button
                 className="mt-4 btn mb-0 px-3 py-1"
                 style={{ backgroundColor: "#1ccb49", color: "white" }}

@@ -59,8 +59,8 @@ const RhythmDetails = () => {
 									onClick={() => toggleAccordion(item.id)}>
 									<div
 										style={{ background: item.colorcode }}
-										className="me-4 rounded-circle px-2 py-1">
-										{item.id}
+										className="me-4 rounded-circle avatar-xs border border-dark">
+										<span className="d-flex align-items-center justify-content-center h-100">{item.id}</span>
 									</div>
 									<span>{item.Name}</span>
 								</Button>
@@ -71,7 +71,7 @@ const RhythmDetails = () => {
 										{item.Details}
 									</div>
 									<div className="ms-5 mt-3">
-										<Col className="ms-3" md={5}>
+										<Col className="ms-3" xl={3} md={5} xs={10}>
 										<img
 										className="w-100 h-auto"
 											role="button"
