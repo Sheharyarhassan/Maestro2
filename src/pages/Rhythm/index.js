@@ -99,7 +99,7 @@ const Index = () => {
         />
         <img
           src={chickRhythmbottom}
-          style={{ position: "absolute", top: "68%", right: "10%" }}
+          style={{ position: "absolute", top: "68%", right: "5%" }}
           alt=""
         />
         <Container>
