@@ -16,6 +16,9 @@ import Hildey from "../pages/Hildey"
 import Composer from "../pages/Composer"
 import ComposerDetails from "../pages/ComposerDetails"
 import ComposerInnerDetails from "../pages/ComposerInnerDetails"
+import Ludwig from "../pages/Ludwig"
+import Wolfgang from "../pages/Wolfgang"
+
 import { compose } from "redux";
 const authProtectedRoutes = [
   {
@@ -29,6 +32,8 @@ const publicRoutes = [
 
   { path: "/", component: <OnePage /> },
   {path:"/hildey", component: <Hildey/>},
+  {path:"/ludwig", component: <Ludwig/>},
+  {path:"/wolfgang", component: <Wolfgang/>},
   { path: "/login", component: <Hildey /> },
   // { path: "/register", component: <Register /> },
   // { path: "/categories", component: <Categories /> },
@@ -41,9 +46,9 @@ const publicRoutes = [
   { path:'/learn', component: <Learn />},
   { path: "/auth-500", component: <Error500 /> },
   {path: "/composer", component: <Composer/>},
-  {path: "/composerDetails", component: <ComposerDetails/>,
-  },
-  {path: "/composerInnerDetails", component: <ComposerInnerDetails/>,
+  // {path: "/composerDetails", component: <ComposerDetails/>,
+  // },
+  {path: "/composerInnerDetails/:id", component: <ComposerInnerDetails/>,
   }
 ];
 

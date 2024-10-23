@@ -5,14 +5,16 @@ export const bannerCards = [
       ageGroup: "4-7",
       textColor: "#f2b708",
       image: require("../../../assets/images/Images-Maestro/New Assets/Thumbnail - portal yellow.jpg"),
-      area: 'Yellow'
+      area: 'Yellow',
+      link:'/hildey'
     },
     {
       heading: "LUDWIG",
       ageGroup: "8-13",
       textColor: "#59B130 ",
       image: require("../../../assets/images/Images-Maestro/New Assets/Thumbnail - portal green.jpg"),
-      area: 'Green'
+      area: 'Green',
+      link:'/ludwig'
     },
     {
       heading: "WOLFGANG",
@@ -20,5 +22,6 @@ export const bannerCards = [
       textColor: "#d42025",
       image: require("../../../assets/images/Images-Maestro/New Assets/Thumbnail - portal red.jpg"),
       area: 'red',
+      link:'/wolfgang'
     },
   ];

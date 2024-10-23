@@ -299,7 +299,7 @@ const index = () => {
 																	<h5 className="text-dark fw-morebold fs-5">
 																		{item.Period}
 																	</h5>
-																	<NavLink href="/composerdetails">
+																	<NavLink href={`/composerInnerDetails/${item.id}`}>
 																		<Row>
 																			<Col
 																				lg={2}
