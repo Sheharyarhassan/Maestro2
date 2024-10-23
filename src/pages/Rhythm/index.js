@@ -175,7 +175,7 @@ const Index = () => {
                                 <h5 className="text-white mt-2 fw-medium">
                                   {item.Details}
                                 </h5>
-                                <NavLink href="/composerdetails">
+                                <NavLink href="#">
                                   <Row>
                                     <Col
                                       lg={4}

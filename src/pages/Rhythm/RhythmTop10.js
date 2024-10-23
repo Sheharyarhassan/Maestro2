@@ -60,7 +60,7 @@ const RhythmDetails = () => {
 									<div
 										style={{ background: item.colorcode }}
 										className="me-4 rounded-circle avatar-xs border border-dark">
-										<span className="d-flex align-items-center justify-content-center h-100">{item.id}</span>
+										<span className="d-flex align-items-center justify-content-center h-100 fw-morebold">{item.id}</span>
 									</div>
 									<h5 className="fw-morebold text-dark mb-0">{item.Name}</h5>
 								</Button>
