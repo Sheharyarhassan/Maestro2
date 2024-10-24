@@ -9,7 +9,7 @@ const KidVoilentSection = () => {
         <div
 			class="p-md-5 py-lg-4 px-lg-3 px-3 py-5 d-flex justify-content-center align-items-center"
 			style={BackgroundStyle}>
-			<div class="container">
+			<div class="container py-3">
 				<div class="row">
 					<div class="col-lg-6 p-0">
 						<img

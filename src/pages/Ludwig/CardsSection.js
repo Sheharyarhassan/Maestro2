@@ -2,17 +2,17 @@ import React from "react";
 import RightIcon from "../../assets/images/Images-Maestro/New Assets/ludwigright.png";
 import RightBottomIcon from "../../assets/images/Images-Maestro/New Assets/ludwigrightbottom.png";
 import LeftIcon from "../../assets/images/Images-Maestro/New Assets/ludwigleft.png";
-import Chick from "../../assets/images/Images-Maestro/New Assets/Green_051.png";
-import Boxes from "../../assets/images/Images-Maestro/New Assets/boxes.jpg";
-import Boxes2 from "../../assets/images/Images-Maestro/New Assets/boxes2.jpg";
-import Boxes3 from "../../assets/images/Images-Maestro/New Assets/boxes3.jpg";
-import Boxes4 from "../../assets/images/Images-Maestro/New Assets/boxes4.jpg";
-import Boxes5 from "../../assets/images/Images-Maestro/New Assets/boxes5.jpg";
+import Chick from "../../assets/images/Images-Maestro/New Assets/Green_0512.png";
+import Boxes from "../../assets/images/Images-Maestro/New Assets/boxludwig1.png";
+import Boxes2 from "../../assets/images/Images-Maestro/New Assets/Boxeludwig.png";
+import Boxes3 from "../../assets/images/Images-Maestro/New Assets/Composers map v3.png";
+import Boxes4 from "../../assets/images/Images-Maestro/New Assets/boxludwig2.png";
+import Boxes5 from "../../assets/images/Images-Maestro/New Assets/boxes 10.png";
 import { NavLink } from "reactstrap";
 const CardsSection = () => {
   const BackgroundStyle = {
     background:
-      "linear-gradient(180deg, rgba(71,186,212) 0%, rgba(96,214,196) 90%)",
+      "linear-gradient(180deg, rgba(234,150,28) 0%, rgba(221,96,66) 100%)",
     // height: "100vh",
     position: "relative",
     width: "100%",
@@ -66,10 +66,10 @@ const CardsSection = () => {
               </h4>
             </div>
           </div>
-          <div className="col-12 ">
+          <div className="col-12">
             <div className="text-center">
               <img src={Chick} alt="chick" className="mw-100 h-auto" />
-              <h1 className="text-white super-bubble">HILDEY</h1>
+              <h1 className="text-white super-bubble">LUDWIG</h1>
             </div>
           </div>
 
