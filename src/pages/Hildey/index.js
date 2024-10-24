@@ -5,7 +5,7 @@ import KidVoilentSection from './KidVoilentSection'
 const index = () => {
   return (
     <>
-    <Banner/>
+    {/* <Banner/> */}
     <CardsSection/>
     <KidVoilentSection/>
     </>

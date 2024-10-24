@@ -1,11 +1,12 @@
 import React from 'react'
-import ludwig from '../../assets/images/Images-Maestro/New Assets/Ludwig.png'
-
+import CardsSection from './CardsSection'
+import KidVoilentSection from './KidVoilentSection'
 const index = () => {
   return (
-    <div>
-        <img className='w-100 h-auto' src={ludwig} alt='Ludwig'/>
-    </div>
+    <>
+    <CardsSection/>
+    <KidVoilentSection/>
+    </>
   )
 }
 

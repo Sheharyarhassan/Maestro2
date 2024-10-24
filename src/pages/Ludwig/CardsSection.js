@@ -1,8 +1,8 @@
 import React from "react";
-import RightIcon from "../../assets/images/Images-Maestro/New Assets/RightNote.png";
-import RightBottomIcon from "../../assets/images/Images-Maestro/New Assets/RightBottomYellow.png";
-import LeftIcon from "../../assets/images/Images-Maestro/New Assets/LeftNote.png";
-import Chick from "../../assets/images/Images-Maestro/New Assets/Chick.png";
+import RightIcon from "../../assets/images/Images-Maestro/New Assets/ludwigright.png";
+import RightBottomIcon from "../../assets/images/Images-Maestro/New Assets/ludwigrightbottom.png";
+import LeftIcon from "../../assets/images/Images-Maestro/New Assets/ludwigleft.png";
+import Chick from "../../assets/images/Images-Maestro/New Assets/Green_051.png";
 import Boxes from "../../assets/images/Images-Maestro/New Assets/boxes.jpg";
 import Boxes2 from "../../assets/images/Images-Maestro/New Assets/boxes2.jpg";
 import Boxes3 from "../../assets/images/Images-Maestro/New Assets/boxes3.jpg";
