@@ -3,7 +3,8 @@ import React from "react";
 const RhythmBanner = () => {
 	const rhythmBannerStyle = {
 		backgroundColor: "#ef5130",
-		height: "36vh",
+		// height: "36vh",
+		padding:'3rem 1rem',
 		display:'flex',
 		justifyContent:'center',
 		alignItems:'center',

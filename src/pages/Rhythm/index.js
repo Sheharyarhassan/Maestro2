@@ -102,7 +102,7 @@ const Index = () => {
           style={{ position: "absolute",top: customActiveTab === "1" ? "42%" : "68%", right: customActiveTab === "1" ? "10%":"5%" }}
           alt=""
         />
-        <Container>
+        <Container className="rhythmTabsConatiner">
           <Row>
             <Card
               className="pt-5"
@@ -119,6 +119,7 @@ const Index = () => {
                         cursor: "pointer",
                         fontWeight: "bold",
                         fontSize:'1rem',
+						display:'inlineBlock',
                         color:
                           customActiveTab === "1"
                             ? "rgb(0,159,227)"
@@ -129,7 +130,7 @@ const Index = () => {
                       })}
                       onClick={() => toggleCustom("1")}
                     >
-                      TOP10
+                      <span className="pe-1">TOP</span><span>10</span>
                     </NavLink>
                   </NavItem>
                   {alphabet.map((char, index) => (

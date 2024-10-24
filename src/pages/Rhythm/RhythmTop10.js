@@ -59,14 +59,14 @@ const RhythmDetails = () => {
 									onClick={() => toggleAccordion(item.id)}>
 									<div
 										style={{ background: item.colorcode }}
-										className="me-4 rounded-circle avatar-xs border border-dark">
-										<span className="d-flex align-items-center justify-content-center h-100 fw-morebold">{item.id}</span>
+										className="me-3 rounded-circle avatar-sm border border-dark">
+										<span className="d-flex align-items-center justify-content-center fs-4 h-100 fw-morebold">{item.id}</span>
 									</div>
 									<h5 className="fw-morebold text-dark mb-0">{item.Name}</h5>
 								</Button>
 								<Collapse isOpen={openAccordions[item.id]}>
 									<div
-										className="ms-5 ps-3 text-light fw-light w-75"
+										className="ms-5 ps-3 text-light fw-light col-lg-11"
 										style={{ background: "transparent" }}>
 										<h5 className="text-light">{item.Details}</h5>
 									</div>

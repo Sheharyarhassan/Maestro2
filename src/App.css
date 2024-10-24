@@ -73,6 +73,9 @@
 .nav-tabs-custom .nav-item {
   padding-bottom: 5px; /* Adjust as needed */
 }
+.rhythmTabsConatiner .row .card .nav-tabs-custom .nav-item .nav-link.active:after{
+  bottom: 8px !important;
+}
 .rhap_controls-section {
   flex: 0!important;;
 }
