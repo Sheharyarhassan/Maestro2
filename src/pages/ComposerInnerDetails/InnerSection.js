@@ -83,7 +83,7 @@ const InnerSection = () => {
               <div className="composerVideoCard mt-4" onClick={toggleModal}>
                 <h5>Example</h5>
                 <img
-                  src={ComposerModelImage}
+                  src={composer.ComposerModelImage}
                   className="mw-100 h-auto w-100"
                   alt="composer"
                 />

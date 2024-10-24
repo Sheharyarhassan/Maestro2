@@ -318,7 +318,7 @@ const index = () => {
 																			</Col>
 																			<Col lg={10} md={9}>
 																				<h5 className="text-dark mt-2 fw-medium">
-																					{item.Details}
+																					{item.titletext}
 																				</h5>
 																			</Col>
 																		</Row>
