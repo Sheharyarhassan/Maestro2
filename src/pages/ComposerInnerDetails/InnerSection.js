@@ -89,7 +89,7 @@ const InnerSection = () => {
                   alt="composer"
                 />
               </div>
-              <h5 className="mt-4">Example</h5>
+              {/* <h5 className="mt-4">Example</h5> */}
               {/* <div className="playBar bg-white px-3 py-1 rounded-5">
                 <img
                   src={playbarComposer}
