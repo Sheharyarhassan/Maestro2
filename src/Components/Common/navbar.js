@@ -16,7 +16,7 @@ const Navbar = ({ publicRoute }) => {
 
   const location = useLocation(); // Get the current route
   const currentPath = location.pathname; // Extract the path
-
+  // console.log("Location",location);
   const toggle = () => setisOpenMenu(!isOpenMenu);
 
   useEffect(() => {
@@ -34,7 +34,10 @@ const Navbar = ({ publicRoute }) => {
       setnavClass("");
     }
   };
-
+  useEffect(() => {
+    const pathName = location.pathname;
+    console.log("PathName", pathName);
+  }, []);
   return (
     <React.Fragment>
       <nav
@@ -74,12 +77,10 @@ const Navbar = ({ publicRoute }) => {
                   <NavLink
                     href="/about"
                     className={`rounded-3 fw-bold py-1 px-0 d-flex align-items-center me-2 ${
-                      currentPath === "/about"
-                        ? "NavAboutActive"
-                        : null
+                      currentPath === "/about" ? "NavAboutActive" : null
                     }`}
                   >
-										<h5 className="fw-morebold mb-0">About Us</h5>
+                    <h5 className="fw-morebold mb-0">About Us</h5>
                   </NavLink>
                 </li>
                 <li className="nav-item my-2">
@@ -97,7 +98,18 @@ const Navbar = ({ publicRoute }) => {
                   <NavLink
                     href="/game"
                     className="rounded-3 text-white text-uppercase fw-semibold px-4 py-1 d-flex align-items-center me-2"
-                    style={{ backgroundColor: "#41b2d8", height: "fit-content" }}
+                    // style={{ backgroundColor: "#41b2d8", height: "fit-content" }}//#41b2d8
+                    style={{
+                      backgroundColor:
+                        currentPath === "/hildey"
+                          ? "#41b2d8"
+                          : currentPath === "/ludwig"
+                          ? "#ed6729"
+                          : currentPath === "/wolfgang"
+                          ? "#ff283b"
+                          : "#41b2d8",
+                      height: "fit-content",
+                    }} //#41b2d8
                   >
                     Game
                   </NavLink>
@@ -106,7 +118,17 @@ const Navbar = ({ publicRoute }) => {
                   <NavLink
                     href="/rhythm"
                     className="rounded-3 text-uppercase fw-semibold text-white px-4 py-1 d-flex align-items-center me-2"
-                    style={{ backgroundColor: "#1ccb49" }}
+                    style={{
+                      backgroundColor:
+                        currentPath === "/hildey"
+                          ? "#1ccb49"
+                          : currentPath === "/ludwig"
+                          ? "#a9c47f"
+                          : currentPath === "/wolfgang"
+                          ? "#479950"
+                          : "#1ccb49",
+                      height: "fit-content",
+                    }} //#1ccb49
                   >
                     Rhythm
                   </NavLink>
@@ -115,7 +137,20 @@ const Navbar = ({ publicRoute }) => {
                   <NavLink
                     href="/instruments"
                     className="rounded-3 text-uppercase fw-semibold text-white px-4 py-1 d-flex align-items-center me-2"
-                    style={{ backgroundColor: "#e3971d" }}
+                    style={{
+                      background: currentPath === "/wolfgang" ?
+                      "linear-gradient(90deg, rgba(233,195,53) 0%, rgba(237,106,41) 100%)" : 'none',
+                      backgroundColor:
+                        currentPath === "/hildey"
+                          ? "#e3971d"
+                          : currentPath === "/ludwig"
+                          ? "#e9a035"
+                          : currentPath === "/wolfgang"
+                          ? "none"
+                          : "#e3971d",
+                      height: "fit-content",
+                      
+                    }} //#e3971
                   >
                     Instruments
                   </NavLink>
@@ -124,7 +159,17 @@ const Navbar = ({ publicRoute }) => {
                   <NavLink
                     href="/composer"
                     className="text-uppercase rounded-3 fw-semibold text-white px-4 py-1 d-flex align-items-center me-2"
-                    style={{ backgroundColor: "#ef5130" }}
+                    style={{
+                      backgroundColor:
+                        currentPath === "/hildey"
+                          ? "#ef5130"
+                          : currentPath === "/ludwig"
+                          ? "#338cad"
+                          : currentPath === "/wolfgang"
+                          ? "#003074"
+                          : "#ef5130",
+                      height: "fit-content",
+                    }} //#ef5130
                   >
                     COMPOSERS
                   </NavLink>
@@ -133,7 +178,21 @@ const Navbar = ({ publicRoute }) => {
                   <NavLink
                     href="/learn"
                     className="text-uppercase rounded fw-semibold text-white px-4 py-1 d-flex align-items-center"
-                    style={{ backgroundColor: "#ea8bb8" }}
+                    style={{
+                      background: 
+                        currentPath === "/wolfgang"
+                          ? "linear-gradient(90deg, rgba(216,19,132,1) 0%, rgba(164,19,132,1) 100%)"
+                          : "none",
+                      backgroundColor: 
+                        currentPath === "/hildey" ? "#ea8bb8" :
+                        currentPath === "/ludwig" ? "#a790c4" :
+                        currentPath === "/wolfgang" ? "transparent" : 
+                        "#ea8bb8",
+                      
+                      
+                  
+                      height: "fit-content",
+                    }} //#ea8bb8
                   >
                     Learn
                   </NavLink>
