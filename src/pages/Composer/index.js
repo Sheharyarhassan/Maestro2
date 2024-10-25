@@ -193,37 +193,37 @@ const index = () => {
 							minHeight: "130vh",
 						}}>
 						<img
-							className="position-absolute"
-							style={{ left: "-2%", top: "24%" }}
+							className="position-fixed"
+							style={{ left: "-2%", top: "15%" }}
 							src={leftgreen}
 						/>
 						<img
-							className="position-absolute"
+							className="position-fixed"
 							style={{ left: "4%", top: "44%" }}
 							src={leftblue}
 						/>
 						<img
-							className="position-absolute"
-							style={{ left: "-2%", top: "70%" }}
+							className="position-fixed"
+							style={{ left: "-2%", top: "80%" }}
 							src={leftgreenbottom}
 						/>
 						<img
-							className="position-absolute"
-							style={{ right: "1%", top: "17%" }}
+							className="position-fixed"
+							style={{ right: "1%", top: "9%" }}
 							src={rightgreen}
 						/>
 						<img
-							className="position-absolute"
-							style={{ right: "2.5%", top: "24%" }}
+							className="position-fixed"
+							style={{ right: "2.5%", top: "17%" }}
 							src={rightorange}
 						/>
 						<img
-							className="position-absolute"
-							style={{ right: "-2%", top: "50%" }}
+							className="position-fixed"
+							style={{ right: "-2%", top: "40%" }}
 							src={rightblue}
 						/>
 						<img
-							className="position-absolute"
+							className="position-fixed"
 							style={{ right: "-.25%", top: "85%" }}
 							src={rightbottomorange}
 						/>

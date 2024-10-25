@@ -27,20 +27,20 @@ const Home = () => {
 				style={HeaderStyle}
 				id="hero">
 				<img
-					className="position-absolute"
-					style={{ left: "-0.65%", top: "45%" }}
+					className="position-fixed"
+					style={{ left: "-0.65%", top: "40%" }}
 					src={noteImage}
 					alt="Note Image"
 				/>
 				<img
-					className="position-absolute"
-					style={{ right: "5%", top: "15%" }}
+					className="position-fixed"
+					style={{ right: "5%", top: "20%" }}
 					src={musicNotes}
 					alt="Music Notes"
 				/>
 				<img
-					className="position-absolute"
-					style={{ right: "-0.25%", top: "65%" }}
+					className="position-fixed"
+					style={{ right: "-0.25%", top: "55%" }}
 					src={rightBottom}
 					alt="Music Notes"
 				/>

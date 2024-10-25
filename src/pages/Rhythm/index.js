@@ -65,24 +65,24 @@ const Index = () => {
       >
         <img
           src={leftNote}
-          style={{ position: "absolute", top: "20%", left: "-4%",width:customActiveTab === "1" ?"130px":'auto' }}
+          style={{ position: "fixed", top: "20%", left: "-4%",width:customActiveTab === "1" ?"130px":'auto' }}
           alt=""
         />
         <img
           src={leftbluenote}
-          style={{ position: "absolute", top: customActiveTab === "1" ? "55%": "80%", left: "-0.25%"}}
+          style={{ position: "fixed", top: "80%", left: "-0.25%"}}
           alt=""
         />
         <img
           src={rightbluenote}
-          style={{ position: "absolute", top: "10%", right: "-2%" ,width: customActiveTab === "1" ? '100px':'auto'}}
+          style={{ position: "fixed", top: "10%", right: "-2%" ,width: customActiveTab === "1" ? '100px':'auto'}}
           alt=""
         />
         <img
           src={rightbottomSingle}
           style={{
-            position: "absolute",
-            top: customActiveTab === "1" ? "35%" :"44%",
+            position: "fixed",
+            top: "44%",
             right: "2%",
             width: "50px",
           }}
@@ -91,8 +91,8 @@ const Index = () => {
         <img
           src={RightbottomDouble}
           style={{
-            position: "absolute",
-            top: customActiveTab === "1" ? "40%" :"50%",
+            position: "fixed",
+            top: "50%",
             right: "2%",
             width: "20px",
           }}
@@ -100,7 +100,7 @@ const Index = () => {
         />
         <img
           src={chickRhythmbottom}
-          style={{ position: "absolute",top: customActiveTab === "1" ? "42%" : "68%", right: customActiveTab === "1" ? "10%":"5%" }}
+          style={{ position: "fixed",top: "68%", right: "5%" }}
           alt=""
         />
         <Container className="rhythmTabsConatiner">
@@ -128,7 +128,7 @@ const Index = () => {
                       }}
                       className={classnames({
                         active: customActiveTab === "1",
-                      })}
+                      }, "px-0 me-3")}
                       onClick={() => toggleCustom("1")}
                     >
                       <span className="pe-1">TOP</span><span>10</span>
@@ -141,7 +141,6 @@ const Index = () => {
                           cursor: "pointer",
                           fontWeight: "bold",
                           fontSize:'1rem',
-                          padding: "0.5rem 0.5rem",
                           color:
                             customActiveTab === (index + 2).toString()
                               ? "rgb(0,159,227)"
@@ -149,7 +148,7 @@ const Index = () => {
                         }}
                         className={classnames({
                           active: customActiveTab === (index + 2).toString(),
-                        })}
+                        }, "px-0")}
                         onClick={() => toggleCustom((index + 2).toString())}
                       >
                         {char}

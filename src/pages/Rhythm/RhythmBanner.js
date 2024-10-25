@@ -4,7 +4,7 @@ const RhythmBanner = () => {
 	const rhythmBannerStyle = {
 		backgroundColor: "#ef5130",
 		// height: "36vh",
-		padding:'3rem 1rem',
+		padding:'5rem 1rem',
 		display:'flex',
 		justifyContent:'center',
 		alignItems:'center',

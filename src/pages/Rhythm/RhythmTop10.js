@@ -63,24 +63,17 @@ const RhythmDetails = () => {
 										className="me-3 rounded-circle avatar-sm border border-dark">
 										<span className="d-flex align-items-center justify-content-center fs-4 h-100 fw-morebold">{item.id}</span>
 									</div>
-									<h5 className="fw-morebold text-dark mb-0">{item.Name}</h5>
+									<h3 className="fw-morebold text-dark mb-0">{item.Name}</h3>
 								</Button>
 								<Collapse isOpen={openAccordions[item.id]} className="ps-0 ps-md-4">
 									<div
 										className="ms-0 ps-5 text-light fw-light col-lg-12"
 										style={{ background: "transparent" }}>
-										<h5 className="text-light">{item.Details}</h5>
+										<h4 className="text-light">{item.Details}</h4>
 									</div>
 									<div className="ms-5 mt-3">
 										<Col className="ms-3" lg={5} md={7}>
 										<AudioPlayer src={item.audio}/>
-										{/* <img
-										className="w-100 h-auto"
-											role="button"
-											src={player}
-											onClick={() => toggleAudio(item.audio)}
-										/>
-										<audio src={item.audio} preload="auto"></audio> */}
 										</Col>
 									</div>
 								</Collapse>

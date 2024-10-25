@@ -19,15 +19,15 @@ const CardsSection = () => {
     overflowX: "hidden",
   };
   const rightIconStyle = {
-    top: "4%",
+    top: "12%",
     right: "-1%",
   };
   const leftIconStyle = {
-    top: "10%",
+    top: "20%",
     left: "-4%",
   };
   const RightBottomStyle={
-    top: "71%",
+    top: "85%",
     right: "1%",
   }
   return (
@@ -35,19 +35,19 @@ const CardsSection = () => {
       <img
         src={RightIcon}
         alt="MusicIcon"
-        className="position-absolute mw-100 h-auto "
+        className="position-fixed mw-100 h-auto "
         style={rightIconStyle}
       />
       <img
         src={LeftIcon}
         alt="MusicIcon"
-        className="position-absolute mw-100 h-auto"
+        className="position-fixed mw-100 h-auto"
         style={leftIconStyle}
       />
       <img
         src={RightBottomIcon}
         alt="MusicIcon"
-        className="position-absolute mw-100 h-auto"
+        className="position-fixed mw-100 h-auto"
         style={RightBottomStyle}
       />
       <div className="container py-4">

@@ -16,7 +16,7 @@ const index = () => {
 			/>
 			<img
 				className="position-fixed mw-100 h-auto"
-				style={{ left: "-.75%", top: "90%",zIndex:1000 }}
+				style={{ left: "-.75%", top: "90%"}}
 				src={noteRed}
 				alt="Note Red"
 			/>
