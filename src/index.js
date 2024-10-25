@@ -10,7 +10,7 @@ import store from "./slices";
 
 const RootComponent = () => {
   const location = useLocation(); // Use hook inside a component
-  const isPublicRoute = location.pathname === "/";
+  const isPublicRoute = location.pathname === "/" || location.pathname === '/about'|| location.pathname === '/About';
 
   return (
     <>

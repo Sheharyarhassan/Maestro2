@@ -199,3 +199,17 @@
   margin-bottom: 15px;
   margin-right: 10px;
 }
+.NavAboutActive, .NavAboutActive h5 {
+  color: #009fe3!important;
+  position: relative;
+}
+.NavAboutActive:after{
+    content: "";
+    background: #009fe3;
+    height: 5px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    transition: all 250ms ease 0s;
+}

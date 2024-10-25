@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 
 // import Navbar from './navbar';
 import Home from "./home";
-import Client from "./client";
-import Services from "./services";
 // import Footer from './footer';
 
 const Index = () => {
@@ -39,8 +37,6 @@ const Index = () => {
     <React.Fragment>
       <div className="layout-wrapper landing overflow-hidden">
         <Home />
-        <Client />
-        <Services />
         <button
           onClick={() => toTop()}
           className="btn btn-danger btn-icon landing-back-top"

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Col, Row } from "reactstrap";
 
 // Import Images
@@ -71,7 +71,9 @@ const Footer = ({ publicRoute }) => {
 									</li>
 									<li className="ps-2 pe-2 border-end border-dark">
 										<h5 className="mb-0">
-											<Link to="/instruments" className="text-black fw-semibold">
+											<Link
+												to="/instruments"
+												className="text-black fw-semibold">
 												Instruments
 											</Link>
 										</h5>
@@ -113,6 +115,11 @@ const Footer = ({ publicRoute }) => {
 									className={`text-black fw-semibold ${
 										publicRoute ? " text-white " : " text-black "
 									}`}>
+									{publicRoute ? (
+										<NavLink className="text-white me-3" href="/about">
+											About Us
+										</NavLink>
+									) : null}{" "}
 									Contact Us
 								</h5>
 							</div>

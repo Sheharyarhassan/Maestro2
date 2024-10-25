@@ -14,7 +14,7 @@ import Game from "../pages/Game";
 import Learn from "../pages/Learn"
 import Hildey from "../pages/Hildey"
 import Composer from "../pages/Composer"
-import ComposerDetails from "../pages/ComposerDetails"
+import About from "../pages/About"
 import ComposerInnerDetails from "../pages/ComposerInnerDetails"
 import Ludwig from "../pages/Ludwig"
 import Wolfgang from "../pages/Wolfgang"
@@ -46,8 +46,7 @@ const publicRoutes = [
   { path:'/learn', component: <Learn />},
   { path: "/auth-500", component: <Error500 /> },
   {path: "/composer", component: <Composer/>},
-  // {path: "/composerDetails", component: <ComposerDetails/>,
-  // },
+  {path: "/about", component: <About/>},
   {path: "/composerInnerDetails/:id", component: <ComposerInnerDetails/>,
   }
 ];
