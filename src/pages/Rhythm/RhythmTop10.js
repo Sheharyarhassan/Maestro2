@@ -45,16 +45,16 @@ const RhythmDetails = () => {
 	};
 	return (
 		<React.Fragment>
-			<Container>
+			<Container className="px-0">
 				<Row>
-					<div>
+					<div className="px-0">
 						<img className="mw-100 h-auto" src={diagram} alt="Staff Diagram" />
 					</div>
-					<div>
+					<div className="px-0">
 						{accordianData.map((item) => (
 							<div key={item.id} className="mb-3">
 								<Button
-									className="d-flex border-0 text-dark align-items-center "
+									className="d-flex border-0 text-dark align-items-center"
 									style={{ background: "transparent" }}
 									onClick={() => toggleAccordion(item.id)}>
 									<div
@@ -64,9 +64,9 @@ const RhythmDetails = () => {
 									</div>
 									<h5 className="fw-morebold text-dark mb-0">{item.Name}</h5>
 								</Button>
-								<Collapse isOpen={openAccordions[item.id]}>
+								<Collapse isOpen={openAccordions[item.id]} className="ps-0 ps-md-4">
 									<div
-										className="ms-5 ps-3 text-light fw-light col-lg-11"
+										className="ms-0 ps-5 text-light fw-light col-lg-12"
 										style={{ background: "transparent" }}>
 										<h5 className="text-light">{item.Details}</h5>
 									</div>
