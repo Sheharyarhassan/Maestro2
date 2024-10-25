@@ -1,11 +1,11 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Col, Container, Row } from "reactstrap";
 import ComposerBg from "../../assets/images/Images-Maestro/New Assets/ComposerBg.png";
-import ComposerImage from "../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png";
-import playbarComposer from "../../assets/images/Images-Maestro/New Assets/playbarComposer.png";
-import ComposerModelImage from "../../assets/images/Images-Maestro/New Assets/CompserModalImage.png";
+// import ComposerImage from "../../assets/images/Images-Maestro/New Assets/ComposerCardImage.png";
+// import playbarComposer from "../../assets/images/Images-Maestro/New Assets/playbarComposer.png";
+// import ComposerModelImage from "../../assets/images/Images-Maestro/New Assets/CompserModalImage.png";
 import ComposerInnerDetailModal from "./ComposerInnerDetailModal";
-import {tabContent} from '../Composer/ComposerCategory'
+import { tabContent } from "../Composer/ComposerCategory";
 import { useParams } from "react-router-dom";
 
 const InnerSection = () => {
@@ -21,18 +21,18 @@ const InnerSection = () => {
     backgroundImage: `url(${ComposerBg})`,
     backgroundSize: "cover",
     backgroundPosition: "center center",
-    height:"250px"
-  }
+    height: "250px",
+  };
   const [modalOpen, setModalOpen] = useState(false);
   const toggleModal = () => setModalOpen(!modalOpen);
 
-  const { id } = useParams();  // Get the composer ID from the URL
+  const { id } = useParams();
   const [composer, setComposer] = useState(null);
 
   useEffect(() => {
     // Find the composer by ID from your tabContent data
     const numericId = parseInt(id, 10);
-    
+
     const foundComposer = Object.values(tabContent)
       .flat()
       .find((item) => item.id === numericId);
@@ -55,14 +55,15 @@ const InnerSection = () => {
               <div className="composerCard">
                 <div
                   className="imageBox rounded-top-3 text-center"
-                  style={composer.innerImage ? imageBox: imageBoxdummy}
+                  style={composer.innerImage ? imageBox : imageBoxdummy}
                 >
-                  {composer.innerImage && <img
-                    src={composer.innerImage}
-                    alt="composer"
-                    className="w-75 h-auto"
-                  />
-                  }
+                  {composer.innerImage && (
+                    <img
+                      src={composer.innerImage}
+                      alt="composer"
+                      className="w-75 h-auto"
+                    />
+                  )}
                 </div>
                 <div className="contentBox bg-white p-3 rounded-bottom-3">
                   <h5 className="text-dark">
@@ -89,26 +90,34 @@ const InnerSection = () => {
                 />
               </div>
               <h5 className="mt-4">Example</h5>
-              <div className="playBar bg-white px-3 py-1 rounded-5">
+              {/* <div className="playBar bg-white px-3 py-1 rounded-5">
                 <img
                   src={playbarComposer}
                   alt="playbar"
                   className="mw-100 h-auto"
                 />
-              </div>
+              </div> */}
             </div>
           </Col>
           <Col lg="7" className="mt-2 bg-white rounded-3">
             <div className="contentCard px-lg-4 px-3 py-5">
-              <h5 className="fw-bold text-dark lh-base">
-              {composer.Details}
+              <h5 className="fw-bold text-dark lh-base">{composer.Details}</h5>
+              <h5 className="lh-base">
+                {" "}
+                {composer.innerDetails.split("\n").map((line, index) => (
+                  <>
+                    <div key={index}>{line}</div> <br />
+                  </>
+                ))}
               </h5>
-              <h5 className="lh-base"> {composer.innerDetails.split('\n').map((line, index) => (
-            <><div key={index}>{line}</div> <br/></>
-        ))}</h5>
               <button
-                className="mt-4 btn mb-0 px-3 py-1"
-                style={{ backgroundColor: "#1ccb49", color: "white" }}
+                className="mt-2 btn mb-0 px-4 py-2"
+                style={{
+                  backgroundColor: "#1ccb49",
+                  color: "white",
+                  fontSize: "1rem",
+                  padding: "0.70rem 1.8rem",
+                }}
               >
                 VIEW LEARNING MATERIAL
               </button>
