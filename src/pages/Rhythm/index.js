@@ -82,7 +82,7 @@ const Index = () => {
           src={rightbottomSingle}
           style={{
             position: "fixed",
-            top: "44%",
+            top: "55%",
             right: "2%",
             width: "50px",
           }}
@@ -92,7 +92,7 @@ const Index = () => {
           src={RightbottomDouble}
           style={{
             position: "fixed",
-            top: "50%",
+            top: "61%",
             right: "2%",
             width: "20px",
           }}
