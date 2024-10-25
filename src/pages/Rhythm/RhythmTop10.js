@@ -4,6 +4,7 @@ import CardImage from "../../assets/images/Images-Maestro/New Assets/ComposerBg.
 import { accordianData } from "./RhythmData";
 import diagram from "../../assets/images/Images-Maestro/New Assets/Staff diagram with numbers.png";
 import player from "../../assets/images/Images-Maestro/New Assets/player.png";
+import AudioPlayer from "./AudioPlayer";
 const RhythmDetails = () => {
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
@@ -71,14 +72,15 @@ const RhythmDetails = () => {
 										<h5 className="text-light">{item.Details}</h5>
 									</div>
 									<div className="ms-5 mt-3">
-										<Col className="ms-3" xl={4} md={5} xs={10}>
-										<img
+										<Col className="ms-3" lg={5} md={7}>
+										<AudioPlayer src={item.audio}/>
+										{/* <img
 										className="w-100 h-auto"
 											role="button"
 											src={player}
 											onClick={() => toggleAudio(item.audio)}
 										/>
-										<audio src={item.audio} preload="auto"></audio>
+										<audio src={item.audio} preload="auto"></audio> */}
 										</Col>
 									</div>
 								</Collapse>

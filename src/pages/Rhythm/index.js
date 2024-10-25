@@ -58,6 +58,7 @@ const Index = () => {
   return (
     <React.Fragment>
       <RhythmBanner />
+      
       <div
         className="mt-5 position-relative"
         style={{ backgroundColor: "#ea8bb8", overflowX: "hidden" }}

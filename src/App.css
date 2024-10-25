@@ -213,3 +213,27 @@
     bottom: 0;
     transition: all 250ms ease 0s;
 }
+input[type=range] {
+  height: 38px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 35px;
+  width: 7px;
+  border-radius: 4px;
+  background: #f4e72e;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -13px;
+}
