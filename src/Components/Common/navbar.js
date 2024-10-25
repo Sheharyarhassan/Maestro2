@@ -138,8 +138,10 @@ const Navbar = ({ publicRoute }) => {
                     href="/instruments"
                     className="rounded-3 text-uppercase fw-semibold text-white px-4 py-1 d-flex align-items-center me-2"
                     style={{
-                      background: currentPath === "/wolfgang" ?
-                      "linear-gradient(90deg, rgba(233,195,53) 0%, rgba(237,106,41) 100%)" : 'none',
+                      background:
+                        currentPath === "/wolfgang"
+                          ? "linear-gradient(90deg, rgba(233,195,53) 0%, rgba(237,106,41) 100%)"
+                          : "none",
                       backgroundColor:
                         currentPath === "/hildey"
                           ? "#e3971d"
@@ -149,7 +151,6 @@ const Navbar = ({ publicRoute }) => {
                           ? "none"
                           : "#e3971d",
                       height: "fit-content",
-                      
                     }} //#e3971
                   >
                     Instruments
@@ -179,18 +180,19 @@ const Navbar = ({ publicRoute }) => {
                     href="/learn"
                     className="text-uppercase rounded fw-semibold text-white px-4 py-1 d-flex align-items-center"
                     style={{
-                      background: 
+                      background:
                         currentPath === "/wolfgang"
                           ? "linear-gradient(90deg, rgba(216,19,132,1) 0%, rgba(164,19,132,1) 100%)"
                           : "none",
-                      backgroundColor: 
-                        currentPath === "/hildey" ? "#ea8bb8" :
-                        currentPath === "/ludwig" ? "#a790c4" :
-                        currentPath === "/wolfgang" ? "transparent" : 
-                        "#ea8bb8",
-                      
-                      
-                  
+                      backgroundColor:
+                        currentPath === "/hildey"
+                          ? "#ea8bb8"
+                          : currentPath === "/ludwig"
+                          ? "#a790c4"
+                          : currentPath === "/wolfgang"
+                          ? "transparent"
+                          : "#ea8bb8",
+
                       height: "fit-content",
                     }} //#ea8bb8
                   >
