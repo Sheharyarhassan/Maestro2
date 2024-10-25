@@ -1,8 +1,8 @@
 import React from 'react'
-import KidViolin from "../../assets/images/Images-Maestro/New Assets/Kids Violin.jpg"
+import KidViolin from "../../assets/images/Images-Maestro/New Assets/manuel-nageli-7CcPLtywRso-unsplash.jpg"
 const KidVoilentSection = () => {
     const BackgroundStyle = {
-        backgroundColor: '#e3971d'
+        backgroundColor: '#479950'
     }
   return (
     <div>

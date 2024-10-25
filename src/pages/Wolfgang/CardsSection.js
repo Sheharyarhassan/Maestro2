@@ -1,18 +1,18 @@
 import React from "react";
-import RightIcon from "../../assets/images/Images-Maestro/New Assets/RightNote.png";
-import RightBottomIcon from "../../assets/images/Images-Maestro/New Assets/RightBottomYellow.png";
-import LeftIcon from "../../assets/images/Images-Maestro/New Assets/LeftNote.png";
-import Chick from "../../assets/images/Images-Maestro/New Assets/Chick.png";
-import Boxes from "../../assets/images/Images-Maestro/New Assets/boxes.jpg";
-import Boxes2 from "../../assets/images/Images-Maestro/New Assets/boxes2.jpg";
-import Boxes3 from "../../assets/images/Images-Maestro/New Assets/boxes3.jpg";
-import Boxes4 from "../../assets/images/Images-Maestro/New Assets/boxes4.jpg";
-import Boxes5 from "../../assets/images/Images-Maestro/New Assets/boxes5.jpg";
+import RightIcon from "../../assets/images/Images-Maestro/New Assets/wolfTopRight.png";
+import RightBottomIcon from "../../assets/images/Images-Maestro/New Assets/wolfBottomRight.png";
+import LeftIcon from "../../assets/images/Images-Maestro/New Assets/wolfTopLeft.png";
+import Chick from "../../assets/images/Images-Maestro/New Assets/Red_0511.png";
+import Boxes from "../../assets/images/Images-Maestro/New Assets/Piano_red.png";
+import Boxes2 from "../../assets/images/Images-Maestro/New Assets/Violin_Red.png";
+import Boxes3 from "../../assets/images/Images-Maestro/New Assets/ludwigBeethoven.png";
+import Boxes4 from "../../assets/images/Images-Maestro/New Assets/boxwolf.png";
+import Boxes5 from "../../assets/images/Images-Maestro/New Assets/boxes 15.png";
 import { NavLink } from "reactstrap";
 const CardsSection = () => {
   const BackgroundStyle = {
     background:
-      "linear-gradient(180deg, rgba(71,186,212) 0%, rgba(96,214,196) 90%)",
+      "linear-gradient(180deg, rgba(46,131,167) 0%, rgba(1,50,117) 100%)",
     // height: "100vh",
     position: "relative",
     width: "100%",
@@ -69,7 +69,7 @@ const CardsSection = () => {
           <div className="col-12 ">
             <div className="text-center">
               <img src={Chick} alt="chick" className="mw-100 h-auto" />
-              <h1 className="text-white super-bubble">HILDEY</h1>
+              <h1 className="text-white super-bubble">WOLFGANG</h1>
             </div>
           </div>
 
