@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 const Banner = () => {
 	const InstrumentBannerStyle = {
 		backgroundColor: "#e9a035",
-		height: "36vh",
+		padding:'5rem 1rem',
 		display: "flex",
 		justifyContent: "center",
 		alignItems: "center",

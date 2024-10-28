@@ -3,7 +3,7 @@ import React from "react";
 const LearnBanner = () => {
     const LearnBannerStyle = {
 		backgroundColor: "#ea8bb8",
-		height: "36vh",
+		padding:'5rem 1rem',
 		display:'flex',
 		justifyContent:'center',
 		alignItems:'center'

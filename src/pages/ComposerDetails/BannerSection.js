@@ -5,7 +5,7 @@ const BannerSection = () => {
   const backgroundStyle = {
     backgroundImage: `url(${BannerImage})`,
     width: "100%",
-    height: "36vh",
+    padding:'5rem 1rem',
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundRepeate: "no-repeate",

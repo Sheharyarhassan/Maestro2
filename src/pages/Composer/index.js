@@ -190,7 +190,7 @@ const index = () => {
 							backgroundColor: "#f4e652",
 							position: "relative",
 							overflowX: "hidden",
-							minHeight: "130vh",
+							minHeight: "36vh",
 						}}>
 						<img
 							className="position-fixed"
