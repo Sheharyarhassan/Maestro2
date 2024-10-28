@@ -12,7 +12,7 @@ const RhythmBanner = () => {
 	return (
 		<React.Fragment>
 			<div style={rhythmBannerStyle}>
-				<div className="text-center ">
+				<div className="text-center position-realtive z-3">
 					<h1 className="text-white fw-bold">Elements of Music</h1>
 					<div className="container px-5">
 						<h3 className="text-white fw-light">

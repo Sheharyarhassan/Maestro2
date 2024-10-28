@@ -61,11 +61,11 @@ const Index = () => {
       
       <div
         className="mt-5 position-relative"
-        style={{ backgroundColor: "#ea8bb8", overflowX: "hidden" }}
+        style={{ backgroundColor: "#ea8bb8", overflowX: "hidden", minHeight:'36vh'}}
       >
         <img
           src={leftNote}
-          style={{ position: "fixed", top: "20%", left: "-4%",width:customActiveTab === "1" ?"130px":'auto' }}
+          style={{ position: "fixed", top: "25%", left: "-4%"}}
           alt=""
         />
         <img
@@ -75,7 +75,7 @@ const Index = () => {
         />
         <img
           src={rightbluenote}
-          style={{ position: "fixed", top: "10%", right: "-2%" ,width: customActiveTab === "1" ? '100px':'auto'}}
+          style={{ position: "fixed", top: "14%", right: "-2%" }}
           alt=""
         />
         <img

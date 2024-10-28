@@ -17,7 +17,7 @@ const BannerSection = () => {
   return (
     <div className="bannerMainSection" style={backgroundStyle}>
      <Container>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center position-relative z-3">
           <Col sm={10} className="text-center">
             {" "}
             <h1 className="text-white fw-bold"> Composers</h1>
