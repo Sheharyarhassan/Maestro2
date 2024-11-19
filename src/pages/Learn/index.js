@@ -5,8 +5,15 @@ import { content } from "./Content";
 import chick from "../../assets/images/Images-Maestro/New Assets/Chick2.png";
 import playicon from "../../assets/images/Images-Maestro/New Assets/playIcon.png";
 import LearnModal from "./LearnModal";
-
+import VideoPlayer from "../../Components/Common/VideoPlayer";
+const video = require("../../assets/images/Images-Maestro/New Assets/BentleyContinentalGTV8.mp4")
 const index = () => {
+	const tags = [
+		{ time: 10, text: "Intro" },
+		{ time: 30, text: "Chorus" },
+		{ time: 50, text: "Verse 1" },
+		
+	  ];
 	useEffect(() => {
 		window.scrollTo({ top: 0, behavior: "smooth" });
 	}, []);
@@ -57,6 +64,11 @@ const index = () => {
 								</Card>
 							</Col>
 						))}
+					</Row>
+					<Row className="w-100">
+						<Col sm={12}>
+						<VideoPlayer videoSrc={video} tags={tags}/>
+						</Col>
 					</Row>
 				</Container>
 			</div>
