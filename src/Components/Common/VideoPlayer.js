@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-
+import Music from '../../assets/images/Images-Maestro/New Assets/musicPlayer.png'
 const VideoPlayer = ({ videoSrc, tags }) => {
   const videoRef = useRef(null);
   const [progress, setProgress] = useState(0);
@@ -69,27 +69,31 @@ const VideoPlayer = ({ videoSrc, tags }) => {
         controls={false}
         className="video-element"
       />
-      <div className="seek-bar" onClick={handleSeekBarClick}>
-        <div className="progress" style={{ width: `${progress}%` }} />
-        {tags.map((tag, index) => (
-          <div
-            key={index}
-            className="tag"
-            style={{
-              left: `${(tag.time / duration) * 100}%`,
-            }}
-          >
-            🎵
-            <span className="tag-text">{tag.text}</span>
+      <div className="d-flex align-items-center rounded px-2" style={{backgroundColor:'#484848'}}>
+        <div className="controls me-2">
+          <button className="bg-transparent border-0" onClick={handlePlayPause}>
+          <i class={`h2 text-white ${isPlaying ? 'bx bx-pause' : 'bx bx-play'}`}></i>
+          </button>
+        </div>
+        <div className="seek-bar" onClick={handleSeekBarClick}>
+          <div className="progress" style={{ width: `${progress}%` }} />
+          {tags.map((tag, index) => (
+            <div
+              key={index}
+              className="tag"
+              style={{
+                left: `${(tag.time / duration) * 100}%`,
+              }}
+            ><img src={Music} alt="music tags" width="30" height="30"/>
+              {/* 🎵 */}
+              <a href="#" className="tag-text h5">{tag.text}</a>
+            </div>
+          ))}
+        </div>
+        <div className="controls ms-2">
+          <div className="time-display text-white mb-2">
+            {formatTime(currentTime)}/{formatTime(duration)}
           </div>
-        ))}
-      </div>
-      <div className="controls">
-        <button className="play-pause-btn" onClick={handlePlayPause}>
-          {isPlaying ? "Pause" : "Play"}
-        </button>
-        <div className="time-display">
-          {formatTime(currentTime)} / {formatTime(duration)}
         </div>
       </div>
     </div>
